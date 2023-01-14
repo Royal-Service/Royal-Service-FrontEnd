@@ -19,7 +19,6 @@ export default function About() {
                         <Card.Text>
                             We connect customers with trusted service providers for a wide range of services. Our platform is user-friendly and easy to use, making it simple to find the right professional for the job. Our service providers are vetted, licensed, insured, and have a proven track record of delivering high-quality work. Join us for a stress-free service experience and guaranteed satisfaction
                         </Card.Text>
-
                     </Card.Body>
                 </Card>
             </Col>

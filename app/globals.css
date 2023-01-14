@@ -50,4 +50,28 @@
     background-color: #FFC100;
     z-index: -1;
   }
-  
+
+.why-royal {
+    font-size: 40px;
+    text-align: left;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #ccc;
+}
+
+.card-why {
+    width: 75%;
+    margin: 10px 2.5%;
+    font-size: 15px;
+    text-align: left;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px #ccc;
+    border-radius: 10px;
+    border:none;
+    
+}
+
+Card.Title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
