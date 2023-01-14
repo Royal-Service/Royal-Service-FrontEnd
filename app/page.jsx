@@ -4,6 +4,8 @@ import About from './components/About';
 import Header from './components/Header'
 import Hero from './components/Hero';
 import WhyUs from './components/WhyUs';
+import Footer from './components/Footer';
+import Search from './components/Search';
 import Container from 'react-bootstrap/Container';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +18,8 @@ export default function Home() {
             <Hero />
             <About />
             <WhyUs />
-        </Container>
+            {/* <Search /> */}
+      </Container>
+      <Footer />
     </div>)
 }

@@ -25,7 +25,7 @@ export default function Header() {
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#services">Services</Nav.Link>
             <Nav.Link href="#support">Support</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="/afterlogin">About</Nav.Link>
           </Nav>
           <Button className="d-flex me-2" variant="outline-success">Log in</Button>
           <Button className="d-flex me-2" variant="outline-success">Register</Button>
