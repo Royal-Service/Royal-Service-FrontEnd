@@ -1,0 +1,53 @@
+.hero{
+    margin-bottom: 10%;
+
+}
+
+.hero .card-title ,.about .card-title{
+    letter-spacing: 1px;
+    color: #00000091;
+    line-height: 1.8;
+    font-size: 2.5rem;
+
+}
+
+.hero .card-text, .about .card-text{
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: #00000091;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+
+}
+
+.hero .btns {
+    width: 60%;
+}
+
+.heroImg{
+    width: 100%;
+    height: 85%;
+    display: block;
+    margin: 3rem 0 3rem 3rem;
+}
+
+
+.aboutImg {
+    width: 90%;
+    height: 90%;
+    display: block;
+
+}
+
+.circle::before {
+    content: "";
+    position: absolute;
+    top: -10;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: #FFC100;
+    z-index: -1;
+  }
+  
