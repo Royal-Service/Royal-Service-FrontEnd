@@ -1,0 +1,25 @@
+.dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .photo-section, .contact-section, .rating-section {
+    width: 33%;
+    text-align: center;
+  }
+  
+  .photo-section {
+    width: 200px;
+    border-radius: 50%;
+  }
+  
+  .stars {
+    display: flex;
+  }
+  
+  .stars i {
+    color: #FDB45E;
+    font-size: 24px;
+    margin-right: 5px;
+  }

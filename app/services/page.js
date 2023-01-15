@@ -1,4 +1,4 @@
-
+import './page.css'
 
 export default function Search() {
   return (
@@ -19,7 +19,7 @@ export default function Search() {
   {/* cards  */}
 
       <div class="container">
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true"></img>
@@ -34,7 +34,7 @@ export default function Search() {
             </div>
         </div>
         
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://static.thenounproject.com/png/3533069-200.png"></img>
@@ -48,7 +48,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://www.freepnglogos.com/uploads/warning-sign-png/warning-sign-volts-amps-and-other-electric-6.png"></img>
@@ -62,7 +62,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://findicons.com/files/icons/2549/moving_and_packing_icons/512/moving_and_packing_icon_set_01.png"></img>
@@ -76,7 +76,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://www.freepnglogos.com/uploads/ac-png/ac-akshaya-gardeens-home-7.png"></img>
@@ -90,7 +90,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://icon-library.com/images/carpentry-icon/carpentry-icon-15.jpg"></img>
@@ -104,7 +104,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://cdn.discordapp.com/attachments/1062648819801653329/1064140995584872530/Pngtreepaint_brush_line_black_icon_4008027.png"></img>
@@ -118,7 +118,7 @@ export default function Search() {
                 </div>
             </div>
         </div>
-        <div class="card">
+        <div class="services">
             <div class="face face1">
                 <div class="content">
                     <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/launch_128.png?raw=true"></img>
