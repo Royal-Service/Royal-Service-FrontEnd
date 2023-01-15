@@ -24,6 +24,7 @@ export default function Header() {
           <Nav className="m-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#services">Services</Nav.Link>
+            
             <Nav.Link href="#support">Support</Nav.Link>
             <Nav.Link href="/afterlogin">About</Nav.Link>
           </Nav>
