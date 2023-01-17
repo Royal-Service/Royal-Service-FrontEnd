@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,6 +8,7 @@ import Image from 'next/image';
 import Logo from '../assets/Logo.png'
 
 export default function Header() {
+  
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -22,14 +24,15 @@ export default function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#services">Services</Nav.Link>
+            <Nav.Link href="../">Home</Nav.Link>
+            <Nav.Link href="./services">Services</Nav.Link>
             
             <Nav.Link href="#support">Support</Nav.Link>
             <Nav.Link href="/afterlogin">About</Nav.Link>
           </Nav>
-          <Button className="d-flex me-2" variant="outline-success">Log in</Button>
-          <Button className="d-flex me-2" variant="outline-success">Register</Button>
+          <Button href="./login" className="d-flex me-2" variant="outline-success">Log in</Button>
+          <Button href="./client-registration" className="d-flex me-2" variant="outline-success">Register as client</Button>
+          <Button href="./register" className="d-flex me-2" variant="outline-success">Register as Craftsman</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

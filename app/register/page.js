@@ -1,98 +1,140 @@
-"use client"
-import React from "react";
-import {
-    MDBBtn,
-    MDBContainer,
-    MDBRow,
-    MDBCol,
-    MDBCard,
-    MDBCardBody,
-    MDBCardImage,
-    MDBInput,
-    MDBIcon,
-    MDBCheckbox,
-    MDBDropdown, MDBDropdownMenu, MDBDropdownToggle, MDBDropdownItem,
-} from "mdb-react-ui-kit";
+"use client";
+import React, { useState } from 'react';
+import './reg.css';
 
-function Basic() {
-    return (
-        <MDBContainer fluid>
-            <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
-                <MDBCardBody>
-                    <MDBRow>
-                        <MDBCol
-                            md="10"
-                            lg="6"
-                            className="order-2 order-lg-1 d-flex flex-column align-items-center"
-                        >
-                            <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
-                                Sign up
-                            </p>
+function RegistrationForm() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    passwordConfirmation: '',
+    age: '',
+    country: '',
+    gender: '',
+    occupation: ''
+  });
 
-                            <div className="d-flex flex-row align-items-center mb-4 ">
-                                <MDBIcon fas icon="user me-3" size="lg" />
-                                <MDBInput
-                                    label="Your Name"
-                                    id="form1"
-                                    type="text"
-                                    className="w-100"
-                                />
-                            </div>
+  const handleChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value
+    });
+  };
 
-                            <div className="d-flex flex-row align-items-center mb-4">
-                                <MDBIcon fas icon="envelope me-3" size="lg" />
-                                <MDBInput label="Your Email" id="form2" type="email" />
-                            </div>
-                            <div className="d-flex flex-row align-items-center mb-4">
-                                <MDBIcon fas icon="envelope me-3" size="lg" />
-                                <MDBInput label="Your Email" id="form2" type="email" />
-                            </div>
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform form submission here
+  };
 
-                            <div className="d-flex flex-row align-items-center mb-4">
-                                <MDBIcon fas icon="lock me-3" size="lg" />
-                                <MDBInput label="Password" id="form3" type="password" />
-                            </div>
-
-                            <div className="d-flex flex-row align-items-center mb-4">
-                                <MDBIcon fas icon="key me-3" size="lg" />
-                                <MDBInput
-                                    label="Repeat your password"
-                                    id="form4"
-                                    type="password"
-                                />
-                            </div>
-                            
-                            <MDBDropdown>
-                                <MDBDropdownToggle>Dropdown button</MDBDropdownToggle>
-                                <MDBDropdownMenu>
-                                    <MDBDropdownItem link>Action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Another action</MDBDropdownItem>
-                                    <MDBDropdownItem link>Something else here</MDBDropdownItem>
-                                </MDBDropdownMenu>
-                            </MDBDropdown>
-
-                           
-
-                            <MDBBtn className="mb-4" size="lg">
-                                Register
-                            </MDBBtn>
-                        </MDBCol>
-
-                        <MDBCol
-                            md="10"
-                            lg="6"
-                            className="order-1 order-lg-2 d-flex align-items-center"
-                        >
-                            <MDBCardImage
-                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                fluid
-                            />
-                        </MDBCol>
-                    </MDBRow>
-                </MDBCardBody>
-            </MDBCard>
-        </MDBContainer>
-    );
+  return (
+    <form className="registration-form" onSubmit={handleSubmit}>
+      <h2>Register</h2>
+      <div className="form-section">
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="password-confirmation">Confirm Password</label>
+          <input
+            type="password"
+            id="password-confirmation"
+            name="passwordConfirmation"
+            value={formData.passwordConfirmation}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="age">Age</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            value={formData.age}
+            onChange={handleChange}
+            required
+          />
+        </div>
+      </div>
+      <div className="form-section">
+        <div className="form-group">
+          <label htmlFor="country">Country</label>
+          <select
+            id="country"
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select</option>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="Mexico">Mexico</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="gender">Gender</label>
+          <select
+            id="gender"
+            name="gender"
+            value={formData.gender}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label htmlFor="occupation">Occupation</label>
+          <select
+            id="occupation"
+            name="occupation"
+            value={formData.occupation}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select</option>
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+            <option value="unemployed">Unemployed</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit" className="b1">Register</button>
+    </form>
+  );
 }
-
-export default Basic;
+export default RegistrationForm;
