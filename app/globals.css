@@ -22,6 +22,7 @@
 
 .hero .btns {
   width: 60%;
+  margin-top: 16px;
 }
 
 .heroImg{
@@ -159,7 +160,7 @@ Card.Title {
   filter: drop-shadow(0 1px black);
 }
 
-.search > div:after {
+/* .search > div:after {
   content: "";
   background: grey;
   width: 4px;
@@ -168,7 +169,7 @@ Card.Title {
   top: 40px;
   right: 2px;
   transform: rotate(135deg);
-}
+} */
 
 .search > div > input {
   color: black;

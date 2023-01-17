@@ -8,10 +8,10 @@ export default function Search() {
           <h1>One Search, Many Services</h1>
           <h3>Click on search icon, then type your keyword.</h3>
           <div>
-            <input type="text" placeholder="Search for services . . . ." />
-            <div class="sub-main">
-               <button class="button-three">Search</button>
-               </div>
+          <form>
+  <input type="text" placeholder="Search..."/>
+  <button type="submit">Search</button>
+</form>
           </div>
         </div>
       </div>
