@@ -1,6 +1,5 @@
 "use client"
 import { useState } from "react";
-import axios from "axios";
 import "./client.css"
 import React from "react";
 import {
@@ -19,26 +18,50 @@ import {
 
 
 function Basic() {
-    const [formData, setFormData] = useState({"role":"Custmer","crafts":"MOVING_AND_PACKING"});
-    function handleChange(event) {
-        const { name, value } = event.target;
-        setFormData(prevFormData => ({
-          ...prevFormData,
-          [name]: value
-        }));
-      }
-    async function handleSubmit(event) {
-        event.preventDefault();
-        try {
-          const response = await axios.post('http://127.0.0.1:8000/register/', formData);
-          console.log(response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      }
+  const [formData, setFormData] = useState({
+    first_name: '',
+    last_name: '',
+    email: '',
+    password: '',
+    phone_number: '',
+    location: '',
+});
+
+const handleChange = (event) => {
+    setFormData({
+        ...formData,
+        [event.target.name]: event.target.value,
+    });
+};
+
+const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch('http://127.0.0.1:8000/register/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+	
+          "email":"mmmmmmmmmmm@admin.com",
+          "password":"adminadmin",
+          "first_name":"abeeeeeeed",
+          "last_name" :"abeeeeeeeeeed",
+          "role":"Custmer",
+          "phone_number":"0712345678",
+          "location":"IRBID",
+           "crafts": "MOVING_AND_PACKING"
+        }),
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+};
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="post">
         <MDBContainer  fluid>
             <MDBCard className="text-black m-5" style={{ borderRadius: "25px" }}>
                 <MDBCardBody>
