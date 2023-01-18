@@ -7,10 +7,9 @@ import {
     MDBCol,
     MDBRow,
     MDBBtn,
-    MDBIcon,
     MDBInput,
-    MDBCheckbox
 } from 'mdb-react-ui-kit';
+import Image from "next/image";
 
 export default function login() {
     return (
@@ -19,7 +18,7 @@ export default function login() {
             <MDBRow>
 
                 <MDBCol col='10' md='6'>
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+                    <Image src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" className="img-fluid" alt="Sample image" />
                 </MDBCol>
 
                 <MDBCol col='4' md='6'>
@@ -30,8 +29,8 @@ export default function login() {
                         <p className="text-center fw-bold mx-3 mb-0">Login to your Account</p>
                     </div>
 
-                    <MDBInput wrapperClass='mb-4' label='Email address' id='formControlLg' type='email' size="lg" />
-                    <MDBInput wrapperClass='mb-4' label='Password' id='formControlLg' type='password' size="lg" />
+                    <MDBInput wrapper="true" Class='mb-4' label='Email address' id='formControlLg' type='email' size="lg" />
+                    <MDBInput wrapper="true" Class='mb-4' label='Password' id='formControlLg' type='password' size="lg" />
 
                     
 

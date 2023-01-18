@@ -12,7 +12,7 @@ export default function About() {
                 <Image className='aboutImg' src={AboutImg} />
             </Col>
             <Col >
-                <Card mx-auto className="border-0 bg-transparent">
+                <Card mx-auto="true" className="border-0 bg-transparent">
                     <Card.Body>
                         <Card.Title className='circle'
                         >Who We Are ?</Card.Title>

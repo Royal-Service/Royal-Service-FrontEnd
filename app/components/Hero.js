@@ -12,7 +12,7 @@ export default function Hero() {
     return (
         <Row className='hero' lg={2} md={1} sm={1} xs={1}>
             <Col   >
-                <Card mx-auto className="border-0 bg-transparent">
+                <Card mx-auto="true" className="border-0 bg-transparent">
                     <Card.Body>
                         <Card.Title 
                         >Connect with confidence</Card.Title>
