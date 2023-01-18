@@ -6,22 +6,22 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div class="footer-basic">
+    <div className="footer-basic">
       <footer>
-        <ul class="list-inline">
-          <li class="list-inline-item">
+        <ul className="list-inline">
+          <li className="list-inline-item">
             <a href="#">Home</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Services</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">About</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Terms</a>
           </li>
-          <li class="list-inline-item">
+          <li className="list-inline-item">
             <a href="#">Privacy Policy</a>
           </li>
         </ul>
@@ -62,7 +62,7 @@ export default function Footer() {
             />
           </a>
         </div>
-        <p class="copyright">Royal Service © 2023</p>
+        <p className="copyright">Royal Service © 2023</p>
       </footer>
     </div>
   );
