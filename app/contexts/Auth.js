@@ -4,24 +4,24 @@
 // 1.2 create the context wrapper (provider)
 
 import { createContext, useState, useContext } from "react";
-import axios from "axios";
+import axios from 'axios';
 import jwt_decode from "jwt-decode";
+import { useRouter } from 'next/navigation';
 
 const registerURL = "http://127.0.0.1:8000/register/";
 const loginURL = "http://127.0.0.1:8000/login/"
 const refreshUrl = "http://127.0.0.1:8000/login/refresh/"
-
-
-export const AuthContext = createContext(undefined);
+const AuthContext = createContext(undefined);
 
 export function useAuth() {
-    const Auth = useContext(AuthContext) || {};
-
-    if (!Auth) throw new Error("error")
+    const Auth = useContext(AuthContext);
+    if (!Auth) throw new Error("Check your AuthProvider in you _app.js, maybe")
     return Auth;
 }
 
-export function AuthProvider({children}) {
+export function AuthProvider({ children }) {
+
+    const router = useRouter();
 
     let lsData = null
     if (typeof window !== 'undefined') {
@@ -32,17 +32,18 @@ export function AuthProvider({children}) {
         lsData ? JSON.parse(lsData) : null
     );
     const [userInfo, setUserInfo] = useState(() => {
-        return lsData ? jwt_decode(lsData).user_id : null;
+        return lsData ? jwt_decode(lsData).email : null;
     });
 
-    async function signup(userInput) {
+    async function Signup(userInput) {
         try {
-            const res = await axios.post(registerURL, userInput);
+
+            const res = await axios.post(createUserUrl, userInput);
             if (res.status === 400) {
                 console.log(`${res.status} bad request`)
             }
             if (res.status === 201 || res.status === 200) {
-                await login(userInput.email, userInput.password);
+                login(email, password);
             }
         }
         catch (error) {
@@ -58,10 +59,11 @@ export function AuthProvider({children}) {
                 setTokens(res.data); // access + refresh
                 setUserInfo(jwt_decode(res.data.access)); // user_id 
                 localStorage.setItem("AuthTokens", JSON.stringify(res.data))
+                return true
             }
         }
         catch (error) {
-           
+            console.log(`Error Logging in: ${error}`)
         }
     }
 
@@ -75,8 +77,13 @@ export function AuthProvider({children}) {
                 access: res.data.access,
                 refresh: tokens.refresh
             }
-            
+            console.log("refresh token res", res.data); // access
+            console.log(55555555555, newTokens);
             setTokens(newTokens);
+
+            console.log(66666666666, tokens);
+
+            // setUserInfo(jwt_decode(newTokens.access));
             localStorage.setItem("AuthTokens", JSON.stringify(newTokens));
         } else {
             logout();
@@ -85,26 +92,26 @@ export function AuthProvider({children}) {
 
     function isAuth() {
         try {
-            
+            console.log(4444444, tokens.access, tokens.refresh)
             if (tokens.access && tokens.refresh) {
                 const access = jwt_decode(tokens?.access);
                 const refresh = jwt_decode(tokens?.refresh);
                 const now = Math.ceil(Date.now() / 1000);
-                
-                setUserInfo(access?.user_id);
+                console.log(access?.email);
+                setUserInfo(access?.email);
                 if (access.exp > now) {
-                   
+                    console.log("Access token hasn't expired")
                     return true;
                 }
                 if (access?.exp < now && refresh.exp > now) {
-                    refreshToken();
-                    
-                    return true;
+                    // refreshToken();
+                    console.log("Need to refresh token");
+                    return false;
                 }
                 return false;
             }
         } catch (error) {
-            
+            console.log(`Error in authenticating the user${error}`);
             return false;
         }
     }
@@ -113,21 +120,21 @@ export function AuthProvider({children}) {
         setTokens(null);
         setUserInfo(null);
         localStorage.removeItem("AuthTokens")
+        router.push("/");
     }
 
     const globalState = {
         tokens,
-        signup,
+        Signup,
         login,
         logout,
         refreshToken,
         isAuth,
         userInfo,
     }
-    return(
+    return (
         <AuthContext.Provider value={globalState}>
             {children}
         </AuthContext.Provider>
     )
 }
-
