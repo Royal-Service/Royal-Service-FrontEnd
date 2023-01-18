@@ -21,7 +21,7 @@ export function useAuth() {
     return Auth;
 }
 
-export function AuthWrapper({children}) {
+export function AuthProvider({children}) {
 
     let lsData = null
     if (typeof window !== 'undefined') {
