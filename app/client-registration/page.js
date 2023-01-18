@@ -71,7 +71,7 @@ const handleSubmit = (event) => {
                             lg="6"
                             className="order-2 order-lg-1 d-flex flex-column align-items-center"
                         >
-                            <p classNAme="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+                            <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                                 Sign up
                             </p>
 
@@ -111,10 +111,10 @@ const handleSubmit = (event) => {
                             </div>
 
                             
-                            <div class="d-flex flex-row align-items-center mb-4 ">
+                            <div className="d-flex flex-row align-items-center mb-4 ">
                                 <div className="select">
-                                    <label class="form-label" for="form1" >City</label>
-                                    <select onChange={handleChange} name="location" class="form-control w-100"
+                                    <label className="form-label" htmlFor="form1" >City</label>
+                                    <select onChange={handleChange} name="location" className="form-control w-100"
                                     >
                                         <option value="">Select</option>
                                         <option value="AMMAN">Amman</option>

@@ -27,114 +27,167 @@ function RegistrationForm() {
   };
 
   return (
-    <form className="registration-form" onSubmit={handleSubmit}>
-      <h2>Register</h2>
-      <div className="form-section">
-        <div className="form-group">
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password-confirmation">Confirm Password</label>
-          <input
-            type="password"
-            id="password-confirmation"
-            name="passwordConfirmation"
-            value={formData.passwordConfirmation}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="age">Age</label>
-          <input
-            type="number"
-            id="age"
-            name="age"
-            value={formData.age}
-            onChange={handleChange}
-            required
-          />
+
+
+    <div class="section">
+      <div class="container1">
+        <div class="row full-height justify-content-center">
+          <div class="col-12 text-center align-self-center py-5">
+            <div class="section pb-5 pt-5 pt-sm-2 text-center">
+              <h6 class="mb-0 pb-3"><span>Client</span><span>Craftsman</span></h6>
+              <input class="checkbox" type="checkbox" id="reg-log" name="reg-log" />
+              <label for="reg-log"></label>
+              <div class="card-3d-wrap mx-auto">
+                <div class="card-3d-wrapper">
+                  <div class="card-front">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Sign Up</h4>
+                        <div class="form-group">
+                          <input type="text" name="logemail" class="form-style" placeholder="First Name" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="text" name="logpass" class="form-style" placeholder="Last Name" id="logpass" autocomplete="off"></input>
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="tel" name="logemail" class="form-style" placeholder="Phone Number" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="logemail" class="form-style" placeholder="Password" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+
+                        <div class="form-group">
+
+                          <label >
+                            <select name="location" class="form-style" id="select">
+                              <option value="">Select Location</option>
+                              <option value="AMMAN">Amman</option>
+                              <option value="ZARQA">Zarqa</option>
+                              <option value="IRBID">Irbid</option>
+                              <option value="AQAPA">Aqaba</option>
+                              <option value="MAFRAQ">Mafraq</option>
+                              <option value="MADABA">Madaba</option>
+                              <option value="BALQA">As-Salt</option>
+                              <option value="JERASH">Jerash</option>
+                              <option value="MAAN">Ma'an</option>
+                              <option value="KARAK">Karak</option>
+                              <option value="TAFILAH">Tafilah</option>
+                              <option value="AJLOUN">Ajloun</option>
+                            </select>
+                          </label>
+                        </div>
+
+
+
+
+
+                        <a href="#" class="btn1 mt-4">submit</a>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+                  {/* -------------------serves brovider ------------------------ */}
+                  <div class="card-back">
+                    <div class="center-wrap">
+                      <div class="section text-center">
+                        <h4 class="mb-4 pb-3">Sign Up</h4>
+                        <div class="form-group">
+                          <input type="text" name="logemail" class="form-style" placeholder="First Name" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="text" name="logpass" class="form-style" placeholder="Last Name" id="logpass" autocomplete="off"></input>
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="logemail" class="form-style" placeholder="Your Email" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="tel" name="logemail" class="form-style" placeholder="Phone Number" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group">
+                          <input type="email" name="logemail" class="form-style" placeholder="Password" id="logemail" autocomplete="off"></input>
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+
+                        <div class="form-group">
+
+                          <label >
+                            <select name="location" class="form-style" id="select">
+                              <option value="">Select Location</option>
+                              <option value="AMMAN">Amman</option>
+                              <option value="ZARQA">Zarqa</option>
+                              <option value="IRBID">Irbid</option>
+                              <option value="AQAPA">Aqaba</option>
+                              <option value="MAFRAQ">Mafraq</option>
+                              <option value="MADABA">Madaba</option>
+                              <option value="BALQA">As-Salt</option>
+                              <option value="JERASH">Jerash</option>
+                              <option value="MAAN">Ma'an</option>
+                              <option value="KARAK">Karak</option>
+                              <option value="TAFILAH">Tafilah</option>
+                              <option value="AJLOUN">Ajloun</option>
+                            </select>
+                          </label>
+                        </div>
+                        
+                        <div class="form-group">
+
+                          <label >
+                            <select name="crafts" class="form-style" id="select">
+                              <option value="">Crafts</option>
+                              <option value="PLUMBING_WORK">Plumbing Work</option>
+                              <option value="ELECTRICAL_WORK">Electrical Work</option>
+                              <option value="MOVING_AND_PACKING">Moving and packing</option>
+                              <option value="HOME_REPAIRS">Home Repairs</option>
+                              <option value="POWER_WASHING">Power Washing</option>
+                              <option value="PAINTING">Painting</option>
+                              <option value="CARPENTRY">Carpentry</option>
+                              <option value="HVAC_REPAIR">HVAC_repair</option>
+                            
+                            </select>
+                          </label>
+                        </div>
+
+
+
+
+
+
+                        <a href="#" class="btn1 mt-4">submit</a>
+
+                      </div>
+                    </div>
+                  </div>
+
+
+
+
+
+
+
+
+
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="form-section">
-        <div className="form-group">
-          <label htmlFor="country">Country</label>
-          <select
-            id="country"
-            name="country"
-            value={formData.country}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select</option>
-            <option value="USA">USA</option>
-            <option value="Canada">Canada</option>
-            <option value="Mexico">Mexico</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="gender">Gender</label>
-          <select
-            id="gender"
-            name="gender"
-            value={formData.gender}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="occupation">Occupation</label>
-          <select
-            id="occupation"
-            name="occupation"
-            value={formData.occupation}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select</option>
-            <option value="student">Student</option>
-            <option value="professional">Professional</option>
-            <option value="unemployed">Unemployed</option>
-          </select>
-        </div>
-      </div>
-      <button type="submit" className="b1">Register</button>
-    </form>
+    </div>
+
   );
 }
 export default RegistrationForm;
