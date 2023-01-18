@@ -54,7 +54,15 @@ export default function Header() {
             <Nav.Link href="/afterlogin">About</Nav.Link>
           </Nav>
           {tokens ? (
-            <Button>logout</Button>
+            <Button
+              onClick={() => {
+                logout();
+              }}
+              className="d-flex me-2"
+              variant="outline-success"
+            >
+              logout
+            </Button>
           ) : (
             <Button
               onClick={() => router.push("/login")}
