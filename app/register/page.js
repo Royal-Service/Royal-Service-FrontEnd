@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './reg.css';
 
 function RegistrationForm() {
+  const [flag,setFlag]=useState(false)
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -18,10 +19,24 @@ function RegistrationForm() {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
-      role: event.target.checked ? 'Craftsman' : 'Customer',
+      role: flag ? 'Craftsman' : 'Customer',
 
     });
   };
+  const handelFlag =()=>{
+    if(flag){
+      setFlag(false)
+    }else{
+      setFlag(true)
+    }
+    setFormData({
+      ...formData,
+      role: flag ? 'Customer':'Craftsman',
+
+    });
+    console.log(flag)
+    console.log("hi")
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -62,7 +77,7 @@ function RegistrationForm() {
           <div className="col-12 text-center align-self-center py-5">
             <div className="section pb-5 pt-5 pt-sm-2 text-center">
               <h6 className="mb-0 pb-3"><span>Client</span><span>Craftsman</span></h6>
-              <input onChange={handleChange}
+              <input onClick={handelFlag}
                 className="checkbox" type="checkbox" id="reg-log" name="role" value="Custmer" />
               <label htmlFor="reg-log"></label>
               <div className="card-3d-wrap mx-auto">
@@ -215,7 +230,7 @@ function RegistrationForm() {
                                 <option value="POWER_WASHING">Power Washing</option>
                                 <option value="PAINTING">Painting</option>
                                 <option value="CARPENTRY">Carpentry</option>
-                                <option value="HVAC_REPAIR">HVAC_repair</option>
+                                <option value="HVAC_REPAIR">HVAC repair</option>
 
                               </select>
                             </label>
