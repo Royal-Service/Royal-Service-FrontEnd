@@ -1,3 +1,4 @@
+
 "use client"
 import { useState } from "react";
 import "./client.css"
@@ -156,5 +157,6 @@ const handleSubmit = (event) => {
         </form>
     );
 }
+
 
 export default Basic;

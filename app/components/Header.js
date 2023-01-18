@@ -31,8 +31,8 @@ export default function Header() {
             <Nav.Link href="/afterlogin">About</Nav.Link>
           </Nav>
           <Button href="./login" className="d-flex me-2" variant="outline-success">Log in</Button>
-          <Button href="./client-registration" className="d-flex me-2" variant="outline-success">Register as client</Button>
-          <Button href="./register" className="d-flex me-2" variant="outline-success">Register as Craftsman</Button>
+          <Button href="./register" className="d-flex me-2" variant="outline-success">Register</Button>
+          
         </Navbar.Collapse>
       </Container>
     </Navbar>
