@@ -1,7 +1,42 @@
+
 .hero{
   margin-bottom: 10%;
 
 }
+.nav .navl{
+  font-weight: bold;
+  font-size: large;
+}
+.pname{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.pname:hover{
+  color: black;
+  transition-duration: 300ms;
+  transition-delay:200ms;
+}
+
+.nav{
+  background-color: #F6BD00;
+}
+.nav .d-inline-block {
+  font-weight: bold;
+  font-size: 100px;
+}
+.nav .d-flex{
+  background-color:#1e1e1e ;
+  color: white;
+  border-color: #1e1e1e;
+  margin-left: 10px;
+  margin-right: 10px;
+  
+}
+.nav .d-flex:hover{
+  background-color: #2C2B2B;
+  border-color: #2C2B2B;
+}
+
 
 .hero .card-title ,.about .card-title{
   letter-spacing: 1px;
@@ -10,6 +45,7 @@
   font-size: 2.5rem;
 
 }
+
 
 .hero .card-text, .about .card-text{
   letter-spacing: 2px;
@@ -23,6 +59,8 @@
 .hero .btns {
   width: 60%;
   margin-top: 16px;
+  background-color:#1e1e1e ;
+  border-color: #1e1e1e;
 }
 
 .heroImg{
@@ -79,9 +117,11 @@ Card.Title {
 
 .footer-basic {
   padding:40px 0;
-  background-color:#ffffff;
+  background-color:#DDDDDD;
   color:#4b4c4d;
 }
+
+
 
 .footer-basic ul {
   padding:0;
@@ -111,6 +151,7 @@ Card.Title {
   justify-content: center;
   padding:15px 20px;
   margin-bottom: 0.5em;
+  
 }
 
 .social-icons a {
@@ -120,6 +161,7 @@ Card.Title {
 .social-icons img {
   width: 32px;
   height: 32px;
+  border-radius:50%;
 }
 
 .footer-basic .copyright {

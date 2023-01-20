@@ -1,0 +1,32 @@
+.custom-styles {
+    background-color: #f5f5f5;
+    font-size: 14px;
+    padding: 8px;
+  }
+ h2{
+    padding: 10px;
+ }
+  /* input field styles */
+  .custom-styles input {
+    width: 300px;
+    height: 30px;
+    padding-left: 40px; /* To make room for the icon */
+    position: relative;
+   top:20px; 
+  }
+  /* calendar icon styles */
+  .icon {
+    
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 310px; 
+    top: 0px; 
+   
+    transform: translateY(-50%); /* To center the icon vertically */
+    cursor: pointer;
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 3px; /* Add rounded corners */
+   padding-left: 7px;
+   padding-right: 7px;
+  }

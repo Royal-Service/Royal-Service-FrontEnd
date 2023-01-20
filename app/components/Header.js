@@ -32,7 +32,7 @@ export default function Header() {
   // }, []);
 
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar className="nav" expand="lg">
       <Container>
         <Navbar.Brand href="#home">
           <Image
@@ -42,16 +42,16 @@ export default function Header() {
             height="30"
             className="d-inline-block align-top me-2"
           />
-          React-Bootstrap
+          <a className="pname" href="../"><h3>Royal Services</h3></a>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link href="../">Home</Nav.Link>
-            <Nav.Link href="./services">Services</Nav.Link>
+            <Nav.Link className="navl" href="../">Home</Nav.Link>
+            <Nav.Link className="navl" href="./services">Services</Nav.Link>
 
-            <Nav.Link href="#support">Support</Nav.Link>
-            <Nav.Link href="/afterlogin">About</Nav.Link>
+            <Nav.Link className="navl" href="#support">Support</Nav.Link>
+            <Nav.Link className="navl" href="/about">About</Nav.Link>
           </Nav>
           {tokens ? (
             <Button
