@@ -116,12 +116,12 @@ export default function login(props) {
                         </form>
                         <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                           Dont have an account yet?{" "}
-                          <button
-                           
-                            onClick={() => router.push("/register")}
+                          <a
+                           href="./register"
+                            // onClick={() => router.push("/register")}
                           >
                             Sign up
-                          </button>
+                          </a>
                         </p>
                       </div>
                     </div>
