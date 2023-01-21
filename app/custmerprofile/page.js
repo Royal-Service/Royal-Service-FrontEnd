@@ -39,14 +39,14 @@ export default function CustmerProfile() {
      useEffect(() => {
        (async () => {
          if (Number.isInteger(custmerID)) {
-           const userdata = await axios.get(userInfoURL + custmerID);
-   
-           setUserData(userdata.data);
-   
+          const userdata = await axios.get(userInfoURL + custmerID + "/");
+          
+          setUserData(userdata.data);
+          
          }
    
        })();
-     }, []);
+     },[]);
      console.log(userData)
    
      if (userData) {
@@ -69,8 +69,7 @@ export default function CustmerProfile() {
                          style={{ width: "150px" }}
                          fluid
                     />
-                    {/* <p className="text-muted mb-1">{userData.crafts}</p>
-                    <p className="text-muted mb-4">{userData.location}</p> */}
+                    <p className="text-muted mb-4">{userData.location}</p>
                     <div className="d-flex justify-content-center mb-1">
                          <MDBBtn>Change Profile Picture</MDBBtn>
                     </div>
@@ -124,9 +123,9 @@ export default function CustmerProfile() {
                          <MDBCardText>Full Name</MDBCardText>
                          </MDBCol>
                          <MDBCol sm="9">
-                         {/* <MDBCardText className="text-muted">
+                         <MDBCardText className="text-muted">
                          {userData.first_name+" "+userData.last_name}
-                         </MDBCardText> */}
+                         </MDBCardText>
                          </MDBCol>
                     </MDBRow>
                     <hr />
@@ -134,33 +133,33 @@ export default function CustmerProfile() {
                          <MDBCol sm="3">
                          <MDBCardText>Email</MDBCardText>
                          </MDBCol>
-                         {/* <MDBCol sm="9">
+                         <MDBCol sm="9">
                          <MDBCardText className="text-muted">
                          {userInfo}
                          </MDBCardText>
-                         </MDBCol> */}
+                         </MDBCol>
                     </MDBRow>
                     <hr />
                     <MDBRow>
                          <MDBCol sm="3">
                          <MDBCardText>Phone</MDBCardText>
                          </MDBCol>
-                         {/* <MDBCol sm="9">
+                         <MDBCol sm="9">
                          <MDBCardText className="text-muted">
                          {userData.phone_number}
                          </MDBCardText>
-                         </MDBCol> */}
+                         </MDBCol>
                     </MDBRow>
                     <hr />
                     <MDBRow>
                          <MDBCol sm="3">
                          <MDBCardText>Location</MDBCardText>
                          </MDBCol>
-                         {/* <MDBCol sm="9">
+                         <MDBCol sm="9">
                          <MDBCardText className="text-muted">
                          {userData.location}
                          </MDBCardText>
-                         </MDBCol> */}
+                         </MDBCol>
                     </MDBRow>
                     </MDBCardBody>
                </MDBCard>
