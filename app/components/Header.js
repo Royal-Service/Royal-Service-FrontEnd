@@ -17,74 +17,57 @@ export default function Header() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [userData, setUserData] = useState();
-  
 
-  // useEffect(() => {
-  //   (async () => {
-  //     if (userInfo) {
-  //       if (Number.isInteger(userInfo)) {
-  //         const data = await axios.get(userInfoURL + userInfo);
-  //         setUserData(data.data.username);
-  //       } else {
-  //         const data = await axios.get(userInfoURL + userInfo.email);
-  //         setUserData(data.data.username);
-  //       }
-  //     }
-  //   })();
-  // }, []);
+
 
   return (
-    <Navbar className="nav" expand="lg">
+    <Navbar className="color-nav" expand="lg" variant="dark">
       <Container>
-      <Navbar.Brand href="../"
-      id = "nameP" >
+        <Navbar.Brand href="../"
+          id="nameP" >
 
-<Image
-  alt="logo"
-  src={Logo}
-  width="40"
-  height="40"
-  className="d-inline-block align-top me-2"
-  id="navlogo"
-/>
-Royal Services
+          <Image
+            alt="logo"
+            src={Logo}
+            width="40"
+            height="40"
+            className="d-inline-block align-top me-2"
+            id="navlogo"
+          />
+          Royal Services
 
-</Navbar.Brand>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <Nav.Link className="navl" href="../">Home</Nav.Link>
-            <Nav.Link className="navl" href="./services">Services</Nav.Link>
+            <Nav.Link href="../">Home</Nav.Link>
+            <Nav.Link href="./services">Services</Nav.Link>
 
-            <Nav.Link className="navl" href="#support">Support</Nav.Link>
-            <Nav.Link className="navl" href="/about">About</Nav.Link>
+            <Nav.Link href="#support">Support</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
           </Nav>
           {localStorage.getItem("flag") ? (
-            <Button  
+            <button class="btnNav" 
               onClick={() => {
                 logout();
               }}
-              className="d-flex me-2"
-              variant="dark"
             >
-              logout
-            </Button>
+              Logout
+            </button>
           ) : (<>
-            <Button
+            <button class="btnNav" 
               onClick={() => router.push("/login")}
               className="d-flex me-2"
-              variant="dark"
             >
               Log in
-            </Button>
-                      <Button
-                      href="./register"
-                      className="d-flex me-2"
-                      variant="dark"
-                    >
-                      Register
-                    </Button>
-                    </>
+            </button>
+            <button class="btnNav" 
+              href="./register"
+              className="d-flex me-2"
+            >
+              Register
+            </button>
+          </>
           )}
 
 
