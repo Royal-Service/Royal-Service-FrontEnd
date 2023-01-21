@@ -20,7 +20,7 @@ export default function Hero() {
                             Welcome to Royal Services, where we make it easy for you to find the right professional for the job. Our user-friendly platform connects customers with vetted service providers for a wide range of services, from home repairs to office maintenance.
                         </Card.Text>
                        
-                        <Button href="./register"  variant="primary" className="btns fs-5  px-4 ">Join Today </Button>
+                        <Button href="./register"  variant="dark" className="btns fs-5  px-4 ">Join Today </Button>
 
                     </Card.Body>
                 </Card>
