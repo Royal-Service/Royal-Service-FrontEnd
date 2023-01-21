@@ -6,49 +6,47 @@ import Card from 'react-bootstrap/Card';
 
 export default function Why() {
     return (
-        <Container>
+        <Container className='why'>
             <Row>
-                <Col> Why Royal Services? </Col>
+                <Col><h3 className='why-header'> Why Royal Services? </h3></Col>
             </Row>
             <Row className="card-container">
                 <Col>
-                    <Card>
-                        <Card.Body className='why-body'>
-                            <Card.Title> USER-FRIENDLY platform</Card.Title>
-                            Our platform is designed to make it easy for you to find the right professional for the job.
-                        </Card.Body>
-                    </Card>
+                    <Card.Body className='why-body'>
+                        <Card.Title>Time-saving</Card.Title>
+                        <p>                The Royal Service application allows users to easily order and
+                schedule a craftsman at a time that is most convenient for them,
+                without the need to call or visit a physical location.
+                        </p>
+                    </Card.Body>
                 </Col>
                 <Col>
                     <Col>
-                        <Card>
-                            <Card.Body lassName='why-body'>
-                                <Card.Title> SATISFACTION guaranteed</Card.Title>
-                                We stand behind our work and are committed to your satisfaction.
+                        <Card.Body className='why-body'>
+                            <Card.Title> Convenience</Card.Title>
+                            <p>The Royal Service application allows users to easily order and
+                schedule a craftsman at a time that is most convenient for them,
+                without the need to call or visit a physical location.
+</p>
 
-                            </Card.Body>
-                        </Card>
+                        </Card.Body>
                     </Col>
                 </Col>
             </Row>
             <Row className="card-container">
                 <Col>
-                    <Card>
-                        <Card.Body lassName='why-body'>
-                            <Card.Title> DEDICATED customer support</Card.Title>
-                            Our customer support team is available to assist you with any questions or concerns.
-
-                        </Card.Body>
-                    </Card>
+                    <Card.Body className='why-body'>
+                        <Card.Title> DEDICATED customer support</Card.Title>
+                        <p>Our customer support team is available to assist you with any questions or concerns.
+                        </p>
+                    </Card.Body>
                 </Col>
                 <Col>
-                    <Card>
-                        <Card.Body lassName='why-body'>
-                            <Card.Title> WIDE range of services offered</Card.Title>
-                            Whether you need home repairs, office maintenance, or landscaping services, we've got you covered.
-
-                        </Card.Body>
-                    </Card>
+                    <Card.Body className='why-body'>
+                        <Card.Title> WIDE range of services offered</Card.Title>
+                        <p> Whether you need home repairs, office maintenance, or landscaping services, we've got you covered.
+                        </p>
+                    </Card.Body>
 
                 </Col>
             </Row>
