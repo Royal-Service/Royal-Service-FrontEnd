@@ -1,3 +1,4 @@
+
 "use client";
 
 import Container from "react-bootstrap/Container";
@@ -16,6 +17,7 @@ export default function Header() {
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [userData, setUserData] = useState();
+  
 
   // useEffect(() => {
   //   (async () => {
@@ -34,7 +36,8 @@ export default function Header() {
   return (
     <Navbar className="nav" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand >
+          
           <Image
             alt="logo"
             src={Logo}
@@ -43,6 +46,7 @@ export default function Header() {
             className="d-inline-block align-top me-2"
           />
           <a className="pname" href="../"><h3>Royal Services</h3></a>
+          
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -53,33 +57,35 @@ export default function Header() {
             <Nav.Link className="navl" href="#support">Support</Nav.Link>
             <Nav.Link className="navl" href="/about">About</Nav.Link>
           </Nav>
-          {tokens ? (
-            <Button
+          {localStorage.getItem("flag") ? (
+            <Button  
               onClick={() => {
                 logout();
               }}
               className="d-flex me-2"
-              variant="outline-success"
+              variant="dark"
             >
               logout
             </Button>
-          ) : (
+          ) : (<>
             <Button
               onClick={() => router.push("/login")}
               className="d-flex me-2"
-              variant="outline-success"
+              variant="dark"
             >
               Log in
             </Button>
+                      <Button
+                      href="./register"
+                      className="d-flex me-2"
+                      variant="dark"
+                    >
+                      Register
+                    </Button>
+                    </>
           )}
 
-          <Button
-            href="./register"
-            className="d-flex me-2"
-            variant="outline-success"
-          >
-            Register
-          </Button>
+
         </Navbar.Collapse>
       </Container>
     </Navbar>

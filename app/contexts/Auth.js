@@ -22,7 +22,7 @@ export function useAuth() {
 export function AuthProvider({ children }) {
 
     const router = useRouter();
-
+    
     let lsData = null
     if (typeof window !== 'undefined') {
         lsData = localStorage.getItem("AuthTokens");
@@ -59,6 +59,7 @@ export function AuthProvider({ children }) {
                 setTokens(res.data); // access + refresh
                 setUserInfo(jwt_decode(res.data.access)); // user_id 
                 localStorage.setItem("AuthTokens", JSON.stringify(res.data))
+                localStorage.setItem("flag",true)
                 return true
             }
         }
@@ -120,6 +121,7 @@ export function AuthProvider({ children }) {
         setTokens(null);
         setUserInfo(null);
         localStorage.removeItem("AuthTokens")
+        localStorage.removeItem("flag")
         router.push("/");
     }
 
