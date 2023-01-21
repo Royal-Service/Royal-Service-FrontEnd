@@ -39,7 +39,7 @@ export function AuthProvider({ children }) {
     } );
     const [custmerID,setCustmerID]=useState(()=>{
         return lsData ? jwt_decode(lsData).custmer_id : null;
-    } )
+    } );
     
 
     async function Signup(userInput) {
