@@ -13,7 +13,7 @@ export default function Hero() {
         <Row className='hero' lg={2} md={1} sm={1} xs={1}>
             <Col   >
                 <Card mx-auto="true" className="border-0 bg-transparent">
-                    <Card.Body>
+                    <Card.Body width="100%" className='heroT'>
                         <Card.Title 
                         >Connect with confidence</Card.Title>
                         <Card.Text>
@@ -25,9 +25,8 @@ export default function Hero() {
                     </Card.Body>
                 </Card>
             </Col >
-            <Col   className="px-5">
-                <Image className='heroImg' src={HeroImg} />
-            </Col>
+            <Col   className="px-5"></Col>
+                
         </Row>
     )
 }

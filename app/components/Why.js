@@ -13,7 +13,7 @@ export default function Why() {
             <Row className="card-container">
                 <Col>
                     <Card>
-                        <Card.Body>
+                        <Card.Body className='why-body'>
                             <Card.Title> USER-FRIENDLY platform</Card.Title>
                             Our platform is designed to make it easy for you to find the right professional for the job.
                         </Card.Body>
@@ -22,7 +22,7 @@ export default function Why() {
                 <Col>
                     <Col>
                         <Card>
-                            <Card.Body>
+                            <Card.Body lassName='why-body'>
                                 <Card.Title> SATISFACTION guaranteed</Card.Title>
                                 We stand behind our work and are committed to your satisfaction.
 
@@ -34,7 +34,7 @@ export default function Why() {
             <Row className="card-container">
                 <Col>
                     <Card>
-                        <Card.Body>
+                        <Card.Body lassName='why-body'>
                             <Card.Title> DEDICATED customer support</Card.Title>
                             Our customer support team is available to assist you with any questions or concerns.
 
@@ -43,7 +43,7 @@ export default function Why() {
                 </Col>
                 <Col>
                     <Card>
-                        <Card.Body>
+                        <Card.Body lassName='why-body'>
                             <Card.Title> WIDE range of services offered</Card.Title>
                             Whether you need home repairs, office maintenance, or landscaping services, we've got you covered.
 

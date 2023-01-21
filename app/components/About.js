@@ -8,9 +8,7 @@ import Card from 'react-bootstrap/Card';
 export default function About() {
     return (
         <Row className='about' lg={2} md={1} sm={1} xs={1}>
-            <Col  lg={{ order: 'first' }} xs={{ order: 'last' }}  md={{ order: 'lsat' }} sx={{ order: 'last' }} sm={{ order: 'last' }}>
-                <Image className='aboutImg' src={AboutImg} />
-            </Col>
+            
             <Col >
                 <Card mx-auto="true" className="border-0 bg-transparent">
                     <Card.Body>

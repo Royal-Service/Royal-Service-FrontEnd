@@ -1,6 +1,6 @@
 
 .container{
-  width: 900px;
+  
   position: relative;
   display:  grid;
   justify-content: space-between;
@@ -33,7 +33,7 @@
 }
 
 .container .services:hover .face.face1{
-  background: #F6BD00;
+  background: rgb(94, 91, 91);
   transform: translateY(0);
 }
 
@@ -94,6 +94,7 @@
   color: #fff;
 }
 form {
+
   display: flex;
   align-items: center;
 }

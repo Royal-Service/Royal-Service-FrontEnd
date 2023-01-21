@@ -36,18 +36,20 @@ export default function Header() {
   return (
     <Navbar className="nav" expand="lg">
       <Container>
-        <Navbar.Brand >
-          
-          <Image
-            alt="logo"
-            src={Logo}
-            width="30"
-            height="30"
-            className="d-inline-block align-top me-2"
-          />
-          <a className="pname" href="../"><h3>Royal Services</h3></a>
-          
-        </Navbar.Brand>
+      <Navbar.Brand href="../"
+      id = "nameP" >
+
+<Image
+  alt="logo"
+  src={Logo}
+  width="40"
+  height="40"
+  className="d-inline-block align-top me-2"
+  id="navlogo"
+/>
+Royal Services
+
+</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
