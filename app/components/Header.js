@@ -1,5 +1,9 @@
 
 "use client";
+// import { Yanone_Kaffeesatz} from "@next/font/google";
+
+// const yanone_kaffeesatz = Yanone_Kaffeesatz({ subsets: ["latin"] });
+
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -43,7 +47,7 @@ export default function Header() {
             <Nav.Link href="../">Home</Nav.Link>
             <Nav.Link href="./services">Services</Nav.Link>
 
-            <Nav.Link href="#support">Support</Nav.Link>
+            <Nav.Link href="/support">Support</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
           </Nav>
           {localStorage.getItem("flag") ? (

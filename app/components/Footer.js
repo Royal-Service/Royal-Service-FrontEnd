@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="#">Privacy Policy</a>
           </li>
         </ul>
-        <div className="social-icons">
+        {/* <div className="social-icons">
           <a href="" target="_blank">
             <img
               src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHoAAAB6CAMAAABHh7fWAAAAYFBMVEUAAAD////Q0NB2dnba2tpAQEBjY2NfX1+oqKj09PQFBQVNTU37+/tYWFjs7OwODg66urogICDh4eEsLCy0tLRHR0fKysozMzOOjo7Dw8NwcHCFhYUaGhqgoKCampqurq7KmDeXAAADrUlEQVRogcXb25aqMAwG4IjCFJSjJ0Td8/5vuanKyKFo/ras5HLWON+ALaRpSis44qBQdZOGZdJGGaZNrYogw/8OgaqKbgmZ4hapIF6Krg7p3qj+xT49VP7pTKXmqx1FkiruvefRQcNhu2gCb/ThiMA6jgcvtMpRWEeunOnCCn7ghRMdbG1hHdvP3/knOr66wDqun2b6B/p0dpWJzicbunaHddQwnYV+ZKJw7hEzQ198wTouCH33KRPd+bSnr/kdxi/cRK99y0RrHg29KrjRcOhFZJM9oRe428+Y3PMx7X2EvWM81ka051k1jPsn2uuTZBqXeTpbVibKZmnb53Z+Ds/7G+MXwznaaohdi17+G2ebz/9+baZPuBtOk6Avec3JRMd4ZnDfTeTdF/ocG2g4G7ptJvB3mq5TOkBlMqYAX2kKJjSce5qumUNvx3SByv+MMoOmYkSjmX5oljl0PqQVKM/lWxya1ICGL3o6rfh03qcPoNybIhY0HXo0vIqdrKZ2u/gZHPr4pp3n9GV9LPNn8P/zBw2nY8fBMm6Xop9vOhp/TUeDa7ZYkGYvGp5ZwxTP4r3zmF+ahu/XkN7gMqVPumJVpeZpfJASJdWDhie1B1pPbbK53x7oVNPxl+rjMvQ+bmmbT7rT7VOFLKaWF1q1dCRDRy3NSd0XoG8rivFZPVos29FJTPwPptWmi0HBPd68o+JnlwHx88HhO2Mm+Mu2gvgDnEMDrxJF/DUeh674g7YmfprAoYEh1xD/Cc6hgbJESvxxwaF/+XRIpVcayJVK4j9ROPQPn0ZWHRwaeAEjT1EODVxK4veGI2l17neYIclpCUyuffTzinSwrt+k3c8jpDQRAo+UXnh4X7ewVfnbB90Arw/PdA28ND3TCkgVPNMFkCB5pgO7tNAD3aaFgsmw5BJAcOEjuNwTXOQKLu0lCxqCZRzX4pUN/SpeuZbsbOiuZIcXKp3prlCJl2dd6b/yLP5hV/pdlIZL8Y50rxQPT21Hur8BgW67uNGDbRd0frnRw80m8LKd6NEWG7ix6ESPNxax7VQXerKdiv0BF3q6iQzt2zjQhq1zaOPGnjY2DCBtEva0sU0CaQ6x3myaaQ4Baqtl2Avgi5ptiZFsBBJsf5Js+pJsdZNs8JNsa5Rs5pRsYZVs3JVsV5Zs0pZsTV8JNuSvJI8hSB6+WAkeOdEhdtBGh9jxIh1ih6p0iB0l0yF2gO4RUscGnzF/WDJZ9LDk238dEc2TJO+OiGLqI/4Dcg8uJsGKg5gAAAAASUVORK5CYII="
@@ -61,7 +61,7 @@ export default function Footer() {
               height="32"
             />
           </a>
-        </div>
+        </div> */}
         <p className="copyright">Royal Service © 2023</p>
       </footer>
     </div>

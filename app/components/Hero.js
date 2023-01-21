@@ -13,16 +13,18 @@ export default function Hero() {
     return (
         <Container className='hero'>
             <Row>
-                <Col className='box'>
-                    <h3>Connect with confidence</h3>
+                <Col >
+                <h3>Connect with confidence</h3>
+
+                <div className='box'>
                     <p>Welcome to Royal Services, where we make it easy for you to find the right professional for the job. Our user-friendly platform connects customers with vetted service providers for a wide range of services, from home repairs to office maintenance.
                     </p>
-                    <button class="btnNav"
+                    <button class="outline"
                         onClick={() => router.push("/login")}
                     >
-                        Log in
+                        Join Us
                     </button>
-
+</div>
                 </Col>
                 <Col></Col>
             </Row>

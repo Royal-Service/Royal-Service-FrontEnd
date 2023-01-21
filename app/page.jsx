@@ -1,8 +1,8 @@
 "use client";
 // import { Inter } from "@next/font/google";
-import About from "./components/About";
+import About from "./components/Who";
 import Hero from "./components/Hero";
-import WhyUs from "./components/WhyUs";
+import Why from "./components/Why";
 import Container from "react-bootstrap/Container";
 import { AuthProvider } from "./contexts/Auth";
 import { useRouter,usePathname } from "next/navigation";
@@ -17,8 +17,9 @@ export default function Home() {
   const router = useRouter();
 
   return (
-    <div >
-     
+    <div style={{ backgroundColor: "#1D1C18" }}>
+         
+
      
      
         <div className="bg-img" style={{ overflow: "hidden", width: "100%" }}>
@@ -26,8 +27,8 @@ export default function Home() {
 
           <Container className="mt-0 px-0 " id ="heee">
             <Hero />
-            <About />
-            <WhyUs />
+            {/* <About /> */}
+            <Why />
           </Container>
         </div>
        
