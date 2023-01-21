@@ -36,6 +36,9 @@ export function AuthProvider({ children }) {
     });
     const [craftsmanID,setCraftsmanID]=useState(()=>{
         return lsData ? jwt_decode(lsData).craftsman_id : null;
+    } );
+    const [custmerID,setCustmerID]=useState(()=>{
+        return lsData ? jwt_decode(lsData).custmer_id : null;
     } )
     
 
@@ -63,6 +66,7 @@ export function AuthProvider({ children }) {
                 setTokens(res.data); // access + refresh
                 setUserInfo(jwt_decode(res.data.access)); // user_id 
                 setCraftsmanID(jwt_decode(res.data.access))
+                setCustmerID(jwt_decode(res.data.access))
                 localStorage.setItem("AuthTokens", JSON.stringify(res.data))
                 localStorage.setItem("flag",true)
                 return true
@@ -106,6 +110,7 @@ export function AuthProvider({ children }) {
                 console.log(access?.email);
                 setUserInfo(access?.email);
                 setCraftsmanID(access?.craftsman_id)
+                setCustmerID(access?.custmer_id)
                 if (access.exp > now) {
                     console.log("Access token hasn't expired")
                     return true;
@@ -126,7 +131,8 @@ export function AuthProvider({ children }) {
     function logout() {
         setTokens(null);
         setUserInfo(null);
-        setCraftsmanID(null)
+        setCraftsmanID(null);
+        setCustmerID(null);
         localStorage.removeItem("AuthTokens")
         localStorage.removeItem("flag")
         router.push("/");
@@ -140,7 +146,8 @@ export function AuthProvider({ children }) {
         refreshToken,
         isAuth,
         userInfo,
-        craftsmanID
+        craftsmanID,
+        custmerID
     }
     return (
         <AuthContext.Provider value={globalState}>

@@ -1,0 +1,13 @@
+.custom-width{
+     width: 1120px;
+}
+
+.text-right {
+     text-align: right;
+     font-weight: bold;
+   }
+
+.header-custom {
+     font-size: 1.5rem;
+     color: black;
+   }

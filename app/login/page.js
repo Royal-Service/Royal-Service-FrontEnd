@@ -30,7 +30,7 @@ export default function login(props) {
     // console.log(check);
 
     if (check) {
-      router.push("/dashboard");
+      router.push("/custmerprofile");
     } else {
       setIsUncorrect(true);
     }
