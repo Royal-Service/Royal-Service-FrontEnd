@@ -12,11 +12,6 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-     
-  background-image: url("./assets/backG.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left top;
 
 }
 
@@ -48,18 +43,19 @@ body {
 #navlogo {
   border-radius: 50%;
 }
+
 .btnNav{
   font-family: PlusJakartaSans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Cantarell,Helvetica Neue,Ubuntu,sans-serif;
   font-size: 1rem;
   align-items: center;
-  height: 48px;
+  height: 49px;
   border-radius: 0.4rem;
   font-weight: 600;
   padding: 0 2.2rem;
+  margin: 10px;
   color: #ddd;
   border: none;
   background: #65441A;
-  
  }
  
  .btnNav:hover {
@@ -242,66 +238,7 @@ body {
   align-items: center;
 }
 
-.search {
-  margin: 20px;
-}
 
-.search > h3 {
-  font-weight: normal;
-}
-
-.search > h1,
-.search > h3 {
-  color: black;
-  margin-bottom: 15px;
-  text-shadow: 0 1px black;
-}
-
-.search > div {
-  display: inline-block;
-  position: relative;
-  filter: drop-shadow(0 1px black);
-}
-
-/* .search > div:after {
-  content: "";
-  background: grey;
-  width: 4px;
-  height: 20px;
-  position: absolute;
-  top: 40px;
-  right: 2px;
-  transform: rotate(135deg);
-} */
-
-.search > div > input {
-  color: black;
-  font-size: 16px;
-  background: transparent;
-  width: 25px;
-  height: 25px;
-  padding: 10px;
-  border: solid 3px black;
-  outline: none;
-  border-radius: 35px;
-  transition: width 0.5s;
-}
-
-.search > div > input::placeholder {
-  color: grey;
-  opacity: 0;
-  transition: opacity 150ms ease-out;
-}
-
-.search > div > input:focus::placeholder {
-  opacity: 1;
-}
-
-.search > div > input:focus,
-.search > div > input:not(:placeholder-shown) {
-  width: 570px;
-  height: 60px
-}
 
 .sub-main{
   width: 100%;
@@ -349,4 +286,10 @@ body {
 }
 
 
+.bg-img{
+  background-image: url("./assets/backG.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left top;
 
+}
