@@ -21,7 +21,7 @@ export default function Home() {
      
      
      
-        <div style={{ overflow: "hidden", width: "100%" }}>
+        <div className="bg-img" style={{ overflow: "hidden", width: "100%" }}>
 
 
           <Container className="mt-0 px-0 " id ="heee">

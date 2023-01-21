@@ -57,13 +57,13 @@ export default function Header() {
           ) : (<>
             <button class="btnNav" 
               onClick={() => router.push("/login")}
-              className="d-flex me-2"
+              // className="d-flex me-2"
             >
               Log in
             </button>
             <button class="btnNav" 
               href="./register"
-              className="d-flex me-2"
+              // className="d-flex me-2"
             >
               Register
             </button>
