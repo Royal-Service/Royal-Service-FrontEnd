@@ -4,6 +4,7 @@
 import emailjs from '@emailjs/browser'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import "./Support.css"
 
 const Support = () => {
     // const form   = useRef();
@@ -19,7 +20,7 @@ const Support = () => {
         e.target.reset()
       };
     return (
-        <div style={{marginTop:"100px"}}>
+        <div  className='supp' >
         <Form  onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label className='fontLabel'>User name </Form.Label>

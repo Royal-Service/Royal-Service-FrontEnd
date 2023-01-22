@@ -26,20 +26,17 @@ body .container .card {
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 30px;
+  margin-top: 200px;
   transition: 0.5s;
+  margin-bottom: 17rem;
 }
 
 body .container .card:nth-child(1) .box .content a {
-  background: #2196f3;
+  background: #65441A;
 }
 
-body .container .card:nth-child(2) .box .content a {
-  background: #e91e63;
-}
 
-body .container .card:nth-child(3) .box .content a {
-  background: #23c186;
-}
+
 
 body .container .card .box {
   position: absolute;
@@ -116,3 +113,9 @@ body .container .card .box .content a:hover {
   background: #fff;
   color: #000;
 }
+
+
+
+
+
+

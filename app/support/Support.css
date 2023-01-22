@@ -1,0 +1,33 @@
+.fontLabel {
+    font-size: 1.2rem;
+    font-weight: 600;
+
+  }
+  
+
+.supp{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 6px solid gray;
+  background-color: #d4d4d4;
+  padding: 200px;
+  
+}
+
+  .boxSupp {
+    width: 300px;
+    border-radius: 10px;
+
+  }
+  .boxSupp {
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .button {
+    margin-top: 20px;
+    background-color: #65441A;
+  }
+  /* // */

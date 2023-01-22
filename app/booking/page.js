@@ -6,6 +6,7 @@ import "./card.css"
 import './datepicker.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendar } from '@fortawesome/free-solid-svg-icons'
+import  Mods from "../booking-model/page.js"
 
 
 export default function date (){
@@ -19,7 +20,7 @@ const handleChange = (time) => {
     return(
 <>
 
-<h2 > select your booking date and time</h2>
+{/* <h2 > select your booking date and time</h2>
 <Datetime 
   value={new Date()} 
   input={true} 
@@ -31,83 +32,23 @@ const handleChange = (time) => {
       <i className="icon" onClick={openCalendar}><FontAwesomeIcon icon={faCalendar}/></i>
     </div>
   )}
-/>
+/> */}
 
 {/* ----------------cards-------------- */}
 
 <div class="container">
-  <div class="card">
-    <div class="box">
-      <div class="content">
-       
-        <h3>Card One</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="box">
-      <div class="content">
-   
-        <h3>Card Two</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-
+  
   <div class="card">
     <div class="box">
       <div class="content">
        
         <h3>Card Three</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
+       < Mods></ Mods>
       </div>
     </div>
   </div>
-  <div class="card">
-    <div class="box">
-      <div class="content">
-       
-        <h3>Card Three</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="box">
-      <div class="content">
-       
-        <h3>Card Three</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="box">
-      <div class="content">
-       
-        <h3>Card Three</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="box">
-      <div class="content">
-       
-        <h3>Card Three</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>
-        <a href="#">Read More</a>
-      </div>
-    </div>
-  </div>
+  
 </div>
 
 
