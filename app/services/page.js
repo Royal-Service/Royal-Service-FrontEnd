@@ -18,7 +18,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>When stuff breaks, your local craftsman is here to fix it. Our home repair services can save you the time and money when it comes to fixing things around your home.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Need Plumbing? we got you covered! Select umong the best plumbers in kingdom.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -47,7 +47,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Lightning, remodeling, Wiring Repairs, Outlet Repair, and more from our best professional Electricians in Town.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Best of the best for you if you want to move from Town, or just want to transport a few things. Also with extra services like Furniture assembly and disassembly. </p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -75,7 +75,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Central Air Conditioning Repair or Maintenance, Heating System Repair or Maintenance? Just call a pro to warm you up in winter or cool you off in summer.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -89,7 +89,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Our carpentry contractors have the skills, tools, and experience necessary to complete a wide range of carpentry projects.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -103,7 +103,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Walls, ceilings, woodwork, and metalwork. Interior and exterior painting, as well as special finishes services. Our guys can refresh the look of your space! </p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
@@ -117,7 +117,7 @@ export default function Search() {
             <div className="face face2">
                 <div className="content">
                     <p>Buildings, decks, sidewalks, driveways, graffiti, carpets, and more. You only need one man with his high-pressure pump to clean it all up.</p>
-                        <a href="#">Book a pro</a>
+                        <a href="./booking">Book a pro</a>
                 </div>
             </div>
         </div>
