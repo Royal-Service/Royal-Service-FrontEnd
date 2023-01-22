@@ -1,28 +1,27 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "react-datetime/css/react-datetime.css";
 import "../card.css"
-import './datepicker.css';
+
 import { useRouter  } from 'next/navigation';
 
 
 export default function booking (){
-
-  const router = useRouter();
-  const { craft = "" } = router.query;
+  const [data, setData] = useState([]);
+  
 
   useEffect(() => {
     async function fetchData() {
-      const res = await fetch(`http://127.0.0.1:8000/Craftsmans/`);
-      const json = await res.json();
-      setData(json);
-      console.log(craft)
-
+      const response = await fetch("http://127.0.0.1:8000/Craftsmans/");
+      const jsonData = await response.json();
+      setData(jsonData);
     }
     fetchData();
-  }, [craft]);
+  }, []);
 
-
+  const filteredData = data.filter(
+    (craft) => craft.crafts === "PLUMBING_WORK"
+  );
 
 
     return(

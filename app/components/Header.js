@@ -45,7 +45,7 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link href="../">Home</Nav.Link>
-            <Nav.Link href="./services">Services</Nav.Link>
+            <Nav.Link href="/services">Services</Nav.Link>
 
             <Nav.Link href="/support">Support</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
@@ -66,7 +66,7 @@ export default function Header() {
               Log in
             </button>
             <button class="btnNav" 
-              href="./register"
+              onClick={() => router.push("/register")}
               // className="d-flex me-2"
             >
               Register
