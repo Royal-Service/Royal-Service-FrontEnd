@@ -1,9 +1,9 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "react-datetime/css/react-datetime.css";
 import "../card.css"
-import './datepicker.css';
-import { useRouter  } from 'next/navigation';
+
+
 
 
 export default function POWER_WASHING (){

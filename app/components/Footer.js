@@ -10,19 +10,17 @@ export default function Footer() {
       <footer>
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="#">Home</a>
+            <a href="../">Home</a>
           </li>
           <li className="list-inline-item">
-            <a href="#">Services</a>
+            <a href="/services">Services</a>
           </li>
           <li className="list-inline-item">
-            <a href="#">About</a>
+            <a href="/about">About</a>
           </li>
+
           <li className="list-inline-item">
-            <a href="#">Terms</a>
-          </li>
-          <li className="list-inline-item">
-            <a href="#">Privacy Policy</a>
+            <a href="/support">Support</a>
           </li>
         </ul>
         {/* <div className="social-icons">
