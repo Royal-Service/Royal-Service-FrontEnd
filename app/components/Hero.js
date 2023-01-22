@@ -8,6 +8,9 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useRouter } from "next/navigation";
+import Booking from "./Booking"
+
+
 
 export default function Hero() {
     const router = useRouter();
@@ -28,7 +31,7 @@ export default function Hero() {
                     
 </div>
                 </Col>
-                <Col></Col>
+                <Col><Col><Booking /></Col></Col>
             </Row>
 
         </Container>

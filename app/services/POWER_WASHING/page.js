@@ -3,7 +3,7 @@ import React, { useState,useEffect } from 'react';
 import "react-datetime/css/react-datetime.css";
 import "../card.css"
 
-
+import Booking from '../../components/Booking';
 
 
 export default function POWER_WASHING (){
@@ -43,8 +43,8 @@ export default function POWER_WASHING (){
         <p>Phone: {d.phone_number}</p>
         <p>Location: {d.location}</p>
 
-        <p>Price: {d.price}</p>
-        <a href="#">booking</a>
+        <p>Price: {d.price}JD/hour</p>
+                <Booking id={d.id}></Booking>
       </div>
     </div>
   </div>
