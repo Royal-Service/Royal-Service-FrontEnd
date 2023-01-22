@@ -32,7 +32,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>When stuff breaks, your local craftsman is here to fix it. Our home repair services can save you the time and money when it comes to fixing things around your home.</p>
-                            <button onClick={() => handleClick('HOME_REPAIRS')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/HOME_REPAIRS')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Need Plumbing? we got you covered! Select umong the best plumbers in kingdom.</p>
-                            <button onClick={() => handleClick('PLUMBING_WORK')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/PLUMBING_WORK')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -55,13 +55,13 @@ export default function Services() {
                     <div className="face face1">
                         <div className="content">
                             <img src="https://www.freepnglogos.com/uploads/warning-sign-png/warning-sign-volts-amps-and-other-electric-6.png"></img>
-                            <h3>Electrical Work </h3>
+                            <h3>Electrical Work</h3>
                         </div>
                     </div>
                     <div className="face face2">
                         <div className="content">
                             <p>Lightning, remodeling, Wiring Repairs, Outlet Repair, and more from our best professional Electricians in Town.</p>
-                            <button onClick={() => handleClick('ELECTRICAL_WORK')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/ELECTRICAL_WORK')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Best of the best for you if you want to move from Town, or just want to transport a few things. Also with extra services like Furniture assembly and disassembly. </p>
-                            <button onClick={() => handleClick('MOVING_AND_PACKING')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/MOVING_AND_PACKING')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Central Air Conditioning Repair or Maintenance, Heating System Repair or Maintenance? Just call a pro to warm you up in winter or cool you off in summer.</p>
-                            <button onClick={() => handleClick('HVAC_REPAIR')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/HVAC_REPAIR')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -103,7 +103,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Our carpentry contractors have the skills, tools, and experience necessary to complete a wide range of carpentry projects.</p>
-                            <button onClick={() => handleClick('CARPENTRY')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/CARPENTRY')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -117,7 +117,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Walls, ceilings, woodwork, and metalwork. Interior and exterior painting, as well as special finishes services. Our guys can refresh the look of your space! </p>
-                            <button onClick={() => handleClick('PAINTING')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/PAINTING')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
@@ -131,7 +131,7 @@ export default function Services() {
                     <div className="face face2">
                         <div className="content">
                             <p>Buildings, decks, sidewalks, driveways, graffiti, carpets, and more. You only need one man with his high-pressure pump to clean it all up.</p>
-                            <button onClick={() => handleClick('POWER_WASHING')}><a>Book a pro</a></button>
+                            <button onClick={() => router.push('/services/POWER_WASHING')}><a>Book a pro</a></button>
                         </div>
                     </div>
                 </div>
