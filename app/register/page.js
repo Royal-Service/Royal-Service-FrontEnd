@@ -45,17 +45,7 @@ function RegistrationForm() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
-      //   {
 
-      //   "email": "msadmm@admin.com",
-      //   "password": "adminadmin",
-      //   "first_name": "asdasdas",
-      //   "last_name": "alsd",
-      //   "role": "Craftsman",
-      //   "phone_number": "0712345678",
-      //   "location": "IRBID",
-      //   "crafts": "MOVING_AND_PACKING"
-      // }
     })
       .then((response) => response.json())
       .then((data) => {

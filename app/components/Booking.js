@@ -1,37 +1,79 @@
-import React, { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Modal from "react-bootstrap/Modal";
+import { useAuth } from "../contexts/Auth";
+import moment from "moment";
+export default function Booking({id}) {
+  const { tokens } = useAuth();
+  const [formData, setFormData] = useState({
+    "day": '',
+    "time": '',
+    "description": '',
+    "Craftsman": id,
+  });
 
-export default function Booking() {
   const [show, setShow] = useState(false);
+
+  const hours = [...Array(12).keys()].map((x) => x + 1);
+  const [selectedHour, setSelectedHour] = useState(null);
+  const [selectedAmPm, setSelectedAmPm] = useState(null);
   const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
+
+  const handleHourChange = (event) => {
+    setSelectedHour(event.target.value);
+  };
+
+  const handleAmPmChange = (event) => {
+    setSelectedAmPm(event.target.value);
+  };
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleDateChange = event => {
+  const handleDateChange = (event) => {
     const selected = new Date(event.target.value);
     const currentDate = new Date();
-
+    const ss = selected.toISOString().slice(0, 10);
+    
     if (selected >= currentDate) {
-      setSelectedDate(selected);
+      setSelectedDate(ss);
+      setFormData({...formData, "day":ss});
     } else {
-      alert('Please select a date in the present or future');
+      alert("Please select a date in the present or future");
     }
   };
 
-  const handleTimeChange = event => {
-    const selected = new Date(`1970-01-01T${event.target.value}`);
-    const currentTime = new Date();
+  const handleDescriptionChange = (event) => {
+    setFormData({...formData, "description":event.target.value});
+  }
 
-    if (selected >= currentTime) {
-      setSelectedTime(selected);
-    } else {
-      alert('Please select a time in the future');
-    }
-  };
+  const bookURl = "http://127.0.0.1:8000/api/booking/submit/"
+  const handleSubmit = (event) => {
+      event.preventDefault();
+      // update the time field in formData with the selected hour and AM/PM value
+      setFormData({
+        ...formData,
+        "day": moment(selectedDate).format("YYYY-MM-DD"),
+        "time": `${selectedHour} ${selectedAmPm}`
+      });
+      
+      fetch(bookURl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' ,"Authorization" : `Bearer ${tokens.access}`},
+        body: JSON.stringify(formData),
+  
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Success:', data);
+          alert("done")
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert("error")
+        });
+    };
 
   return (
     <>
@@ -41,38 +83,60 @@ export default function Booking() {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Booking</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
-            <Form.Group
-              className="mb-3"
-              controlId="exampleForm.ControlTextarea1"
-            >
+          <Form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3">
               <Form.Label>Description</Form.Label>
-              <Form.Control as="textarea" rows={3} />
+              <Form.Control as="textarea" rows={3} onChange={handleDescriptionChange}/>
             </Form.Group>
             <Form.Group className="mb-3" controlId="datepicker">
-
               <Form.Label>Select a date:</Form.Label>
-              <Form.Control type="date" onChange={handleDateChange} min={new Date().toISOString().split("T")[0]} />
+              <Form.Control
+                type="date"
+                onChange={handleDateChange}
+                min={new Date().toISOString().split("T")[0]}
+              />
             </Form.Group>
             <Form.Group className="mb-3" controlId="timepicker">
               <Form.Label>Select a time:</Form.Label>
-              <Form.Control type="time" onChange={handleTimeChange} min={new Date().toTimeString().split(" ")[0]} />
+              <Form.Control as="select" onChange={handleHourChange}>
+                {hours.map((hour) => (
+                  <option key={hour} value={hour}>
+                    {hour}
+                  </option>
+                ))}
+              </Form.Control>
+              <Form.Check
+                type="radio"
+                label="AM"
+                name="amPm"
+                id="am"
+                value="AM"
+                checked={selectedAmPm === "AM"}
+                onChange={handleAmPmChange}
+              />
+              <Form.Check
+                type="radio"
+                label="PM"
+                name="amPm"
+                id="pm"
+                value="PM"
+                checked={selectedAmPm === "PM"}
+                onChange={handleAmPmChange}
+              />
             </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        </Modal.Body>
+
       </Modal>
     </>
   );
 }
-
