@@ -4,7 +4,7 @@ import "react-datetime/css/react-datetime.css";
 import "../card.css"
 
 import Booking from '../../components/Booking';
-
+import Showcraftsman from '../../components/Showcraftsman';
 
 export default function ELECTRICAL_WORK (){
 
@@ -48,6 +48,7 @@ export default function ELECTRICAL_WORK (){
 
         <p>Price: {d.price}JD/hour</p>
         <Booking id={d.id}></Booking>
+        <Showcraftsman d={d}></Showcraftsman>
       </div>
     </div>
   </div>
