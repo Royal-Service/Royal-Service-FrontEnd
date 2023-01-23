@@ -1,6 +1,7 @@
 .fontLabel {
     font-size: 1.2rem;
     font-weight: 600;
+    color: whitesmoke;
 
   }
   
@@ -11,8 +12,11 @@
   align-items: center;
   height: 100%;
   border: 6px solid gray;
-  background-color: #d4d4d4;
+  
   padding: 200px;
+  background-image: url("../assets/tz.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   
 }
 
@@ -28,6 +32,7 @@
   
   .button {
     margin-top: 20px;
+    margin-right: 75rem;
     background-color: #65441A;
   }
   /* // */
