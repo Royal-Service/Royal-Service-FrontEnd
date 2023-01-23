@@ -23,15 +23,15 @@ const Support = () => {
         <div  className='supp' >
         <Form  onSubmit={sendEmail}>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-          <Form.Label className='fontLabel'>User name </Form.Label>
+          <Form.Label className='fontLabel'>Your Name </Form.Label>
           <Form.Control className='boxSupp' type="text" placeholder="User" name='user_name' required />
-          <Form.Label className='fontLabel'>Email address</Form.Label>
+          <Form.Label className='fontLabel'>Your Email</Form.Label>
           <Form.Control className='boxSupp' type="email" placeholder="name@example.com" name='user_email' required />
-          <Form.Label className='fontLabel'>subject</Form.Label>
+          <Form.Label className='fontLabel'>Your Issue</Form.Label>
           <Form.Control className='boxSupp' type="subject" placeholder="Subject" name='subject' required />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Label className='fontLabel' >enter your problem</Form.Label>
+          <Form.Label className='fontLabel' >Please tell us whats wrong</Form.Label>
           <Form.Control as="textarea" rows={3} name='message' placeholder="describe your problem" className='boxSupp'/>
           <Button type='submit' className='button' variant="warning" >Send</Button>
         </Form.Group>

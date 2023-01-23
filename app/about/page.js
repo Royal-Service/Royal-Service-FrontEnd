@@ -80,9 +80,20 @@ export default function Search() {
 
     //     </div>
     //     </div>
-    //     </div>   
-    <div className="cards">
+    //     </div> 
+    <div className="ng">
+    <div className="txt"><h1>ABOUT US</h1>
+    
+    <p>The Safe, Guaranteed Solution to Your Home Repair and Maintenance Needs
+Royal-services is your one-call solution for a wide range of home maintenance and repair needs. Our Craftsmen arrive on time with the tools to complete the job right.
 
+Royal-services technicians are highly skilled craftsmen. Our technicians are home service and improvement experts.</p>
+    
+    </div>
+    <div className="cards">
+     <div className="cards2">
+
+      
       <div className="card">
         <div className="card-info">
           <div ><img className="card-avatar" src="https://avatars.githubusercontent.com/u/109727654?v=4"></img></div>
@@ -197,7 +208,9 @@ export default function Search() {
 
 
 
+      </div>
 
+    </div>
 
     </div>
   )

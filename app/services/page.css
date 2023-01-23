@@ -14,6 +14,7 @@
 .container .services{
   position: relative;
   cursor: pointer;
+  margin-top: 6rem;
 }
 
 .container .services .face{
