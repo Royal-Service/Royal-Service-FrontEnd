@@ -22,44 +22,38 @@ import { useAuth } from "../contexts/Auth";
 import { createContext, useState, useContext, useEffect } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
-import "./dashboard.css"
+import "./dashboard.css";
 import Editcraftsman from "../editcraftsman/page";
 import FilterBooking from "../components/FilterBooking";
+import Review from "../components/Review";
 export default function Profile() {
-
-
-  const { userInfo,craftsmanID } = useAuth();
+  const { userInfo, craftsmanID } = useAuth();
 
   const userInfoURL = "http://127.0.0.1:8000/Craftsmans/profile/";
-  let reviewURL = "http://127.0.0.1:8000/review/craftsman/"
-
+  let reviewURL = "http://127.0.0.1:8000/review/craftsman/";
 
   const [userData, setUserData] = useState();
-  const [rate , setRate]= useState();
-  const [allReview,setAllReview]=useState()
+  const [rate, setRate] = useState();
+  const [allReview, setAllReview] = useState();
 
-  const filterReview = (arr)=>{
+  const filterReview = (arr) => {
     let reviews = arr[2].reviews;
-    let Reviews = reviews.map(item => item.review);
-    setAllReview(Reviews)
-    return Reviews;
-
-  }
+    // let Reviews = reviews.map((item) => item.review);
+    setAllReview(reviews);
+    return reviews;
+  };
   useEffect(() => {
     (async () => {
       if (Number.isInteger(craftsmanID)) {
         const userdata = await axios.get(userInfoURL + craftsmanID);
-        const rate = await axios.get(reviewURL+craftsmanID+"/")
+        const rate = await axios.get(reviewURL + craftsmanID + "/");
 
         setUserData(userdata.data);
-        setRate(rate.data)
-        filterReview(rate.data)
-
+        setRate(rate.data);
+        filterReview(rate.data);
       }
-
     })();
   }, []);
-
 
   if (userData) {
     return (
@@ -93,7 +87,7 @@ export default function Profile() {
                   <p className="text-muted mb-1">{userData.crafts}</p>
                   <p className="text-muted mb-4">{userData.location}</p>
                   <div className="d-flex justify-content-center mb-2">
-                    <Editcraftsman userData={userData} ></Editcraftsman>
+                    <Editcraftsman userData={userData}></Editcraftsman>
                     <MDBBtn outline className="ms-1">
                       Message
                     </MDBBtn>
@@ -106,7 +100,9 @@ export default function Profile() {
                   <MDBListGroup flush className="rounded-3">
                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                       <MDBIcon fas icon="globe fa-lg text-warning" />
-                      <MDBCardText>Average rating : {rate[1].toFixed(1)}</MDBCardText>
+                      <MDBCardText>
+                        Average rating : {rate[1].toFixed(1)}
+                      </MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                       <MDBIcon
@@ -114,31 +110,19 @@ export default function Profile() {
                         icon="github fa-lg"
                         style={{ color: "#333333" }}
                       />
-                      <MDBCardText>test</MDBCardText>
-                    </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                      <MDBIcon
-                        fab
-                        icon="twitter fa-lg"
-                        style={{ color: "#55acee" }}
-                      />
-                      <MDBCardText>test</MDBCardText>
-                    </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                      <MDBIcon
-                        fab
-                        icon="instagram fa-lg"
-                        style={{ color: "#ac2bac" }}
-                      />
-                      <MDBCardText>test</MDBCardText>
-                    </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
-                      <MDBIcon
-                        fab
-                        icon="facebook fa-lg"
-                        style={{ color: "#3b5998" }}
-                      />
-                      <MDBCardText>test</MDBCardText>
+                      <MDBCardText>
+
+
+
+
+
+                        <Review allReview={allReview}></Review>
+
+
+
+
+
+                      </MDBCardText>
                     </MDBListGroupItem>
                   </MDBListGroup>
                 </MDBCardBody>
@@ -153,7 +137,7 @@ export default function Profile() {
                     </MDBCol>
                     <MDBCol sm="9">
                       <MDBCardText className="text-muted">
-                        {userData.first_name+" "+userData.last_name}
+                        {userData.first_name + " " + userData.last_name}
                       </MDBCardText>
                     </MDBCol>
                   </MDBRow>
@@ -164,7 +148,7 @@ export default function Profile() {
                     </MDBCol>
                     <MDBCol sm="9">
                       <MDBCardText className="text-muted">
-                      {userInfo}
+                        {userInfo}
                       </MDBCardText>
                     </MDBCol>
                   </MDBRow>
@@ -175,7 +159,7 @@ export default function Profile() {
                     </MDBCol>
                     <MDBCol sm="9">
                       <MDBCardText className="text-muted">
-                      {userData.phone_number}
+                        {userData.phone_number}
                       </MDBCardText>
                     </MDBCol>
                   </MDBRow>
@@ -205,95 +189,13 @@ export default function Profile() {
               </MDBCard>
 
               <MDBRow>
-                <MDBCol md="6">
+                <MDBCol md="12">
                   <MDBCard className="mb-4 mb-md-0">
                     <MDBCardBody>
-                    <FilterBooking></FilterBooking>
+                      <FilterBooking></FilterBooking>
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
-{/* 
-                <MDBCol md="6">
-                  <MDBCard className="mb-4 mb-md-0">
-                    <MDBCardBody>
-                      <MDBCardText className="mb-4">
-                        <span className="text-primary font-italic me-1">
-                          assigment
-                        </span>{" "}
-                        Project Status
-                      </MDBCardText>
-                      <MDBCardText
-                        className="mb-1"
-                        style={{ fontSize: ".77rem" }}
-                      >
-                        Web Design
-                      </MDBCardText>
-                      <MDBProgress className="rounded">
-                        <MDBProgressBar
-                          width={80}
-                          valuemin={0}
-                          valuemax={100}
-                        />
-                      </MDBProgress>
-
-                      <MDBCardText
-                        className="mt-4 mb-1"
-                        style={{ fontSize: ".77rem" }}
-                      >
-                        Website Markup
-                      </MDBCardText>
-                      <MDBProgress className="rounded">
-                        <MDBProgressBar
-                          width={72}
-                          valuemin={0}
-                          valuemax={100}
-                        />
-                      </MDBProgress>
-
-                      <MDBCardText
-                        className="mt-4 mb-1"
-                        style={{ fontSize: ".77rem" }}
-                      >
-                        One Page
-                      </MDBCardText>
-                      <MDBProgress className="rounded">
-                        <MDBProgressBar
-                          width={89}
-                          valuemin={0}
-                          valuemax={100}
-                        />
-                      </MDBProgress>
-
-                      <MDBCardText
-                        className="mt-4 mb-1"
-                        style={{ fontSize: ".77rem" }}
-                      >
-                        Mobile Template
-                      </MDBCardText>
-                      <MDBProgress className="rounded">
-                        <MDBProgressBar
-                          width={55}
-                          valuemin={0}
-                          valuemax={100}
-                        />
-                      </MDBProgress>
-
-                      <MDBCardText
-                        className="mt-4 mb-1"
-                        style={{ fontSize: ".77rem" }}
-                      >
-                        Backend API
-                      </MDBCardText>
-                      <MDBProgress className="rounded">
-                        <MDBProgressBar
-                          width={66}
-                          valuemin={0}
-                          valuemax={100}
-                        />
-                      </MDBProgress>
-                    </MDBCardBody>
-                  </MDBCard>
-                </MDBCol> */}
               </MDBRow>
             </MDBCol>
           </MDBRow>
@@ -303,7 +205,7 @@ export default function Profile() {
   } else {
     return (
       <div class="gearbox">
-      <div class="overlay"></div>
+        <div class="overlay"></div>
         <div class="gear one">
           <div class="gear-inner">
             <div class="bar"></div>
