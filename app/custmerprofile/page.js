@@ -25,6 +25,7 @@ import { createContext, useState, useContext, useEffect } from "react";
 import axios from "axios";
 import "./custmerprofile.css"
 import Modal2 from "./Modal";
+import FilterReservation from "../components/FilterReservation";
 
 export default function CustmerProfile() {
      const { userInfo,custmerID } = useAuth();
@@ -108,41 +109,15 @@ export default function CustmerProfile() {
                           Reservation schedule
                         </MDBCardTitle>
                         <MDBListGroup flush className="rounded-3">
+
+
                           <MDBListGroupItem className="d-flex  p-3">
                             <MDBCardText className="text-right">
-                              First reservation:
+                              <FilterReservation />
                             </MDBCardText>
                           </MDBListGroupItem>
-                          <MDBListGroupItem className="d-flex align-items-center p-3">
-                            <MDBIcon
-                              fab
-                              icon="twitter fa-lg"
-                              style={{ color: "#55acee" }}
-                            />
-                            <MDBCardText className="text-right">
-                              Second reservation:
-                            </MDBCardText>
-                          </MDBListGroupItem>
-                          <MDBListGroupItem className="d-flex  align-items-center p-3">
-                            <MDBIcon
-                              fab
-                              icon="instagram fa-lg"
-                              style={{ color: "#ac2bac" }}
-                            />
-                            <MDBCardText className="text-right">
-                              Third reservation:
-                            </MDBCardText>
-                          </MDBListGroupItem>
-                          <MDBListGroupItem className="d-flex align-items-center p-3">
-                            <MDBIcon
-                              fab
-                              icon="facebook fa-lg"
-                              style={{ color: "#3b5998" }}
-                            />
-                            <MDBCardText className="text-right">
-                              Fourth reservation:
-                            </MDBCardText>
-                          </MDBListGroupItem>
+
+
                         </MDBListGroup>
                       </MDBCardBody>
                     </MDBCard>
