@@ -101,11 +101,11 @@ body {
   background: #A17745;
   color: #fff;
 }
-form {
+/* form {
 
   display: flex;
   align-items: center;
-}
+} */
 
 input[type="text"] {
   padding: 12px 20px;
