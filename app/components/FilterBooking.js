@@ -20,14 +20,12 @@ function FilterBooking() {
   const filteredData = data.filter(
     (booking) => booking.craftsman.id === craftsmanID
   );
-  console.log(filteredData)
 
   return (
     <div class="container">
       {filteredData.map((d) => (
         <div key={d.id} >
           you have reservation in {d.day} at {d.time}
-          custmer number {d.custmer}
           <Showcustmer datac={d}></Showcustmer>
         </div>
       ))}

@@ -1,14 +1,9 @@
 "use client"
 import React from 'react'
-import HeroImg from '../assets/HeroImg.png'
-import Image from 'next/image'
-import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
 import { useRouter } from "next/navigation";
-import Booking from "./Booking"
 
 
 
@@ -31,7 +26,7 @@ export default function Hero() {
                     
 </div>
                 </Col>
-                <Col><Col><Booking /></Col></Col>
+                <Col></Col>
             </Row>
 
         </Container>
