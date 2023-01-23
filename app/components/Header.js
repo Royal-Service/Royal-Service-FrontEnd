@@ -17,7 +17,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 export default function Header() {
   const userInfoURL = "http://127.0.0.1:8000/profile/";
-  const { tokens, logout, userInfo } = useAuth();
+  const { tokens, logout, userInfo ,custmerID,craftsmanID} = useAuth();
   const router = useRouter();
   const [showModal, setShowModal] = useState(false);
   const [userData, setUserData] = useState();
@@ -49,6 +49,10 @@ export default function Header() {
 
             <Nav.Link href="/support">Support</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
+            {localStorage.getItem("craftsman") ? <Nav.Link href="/dashboard">Profile</Nav.Link> : localStorage.getItem("custmer") ? <Nav.Link href="/custmerprofile">Profile</Nav.Link>:<></>}
+            
+
+
           </Nav>
           {localStorage.getItem("flag") ? (
             <button class="btnNav" 

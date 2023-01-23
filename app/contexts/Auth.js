@@ -67,6 +67,11 @@ export function AuthProvider({ children }) {
                 setUserInfo(jwt_decode(res.data.access)); // user_id 
                 setCraftsmanID(jwt_decode(res.data.access))
                 setCustmerID(jwt_decode(res.data.access))
+                if (jwt_decode(res.data.access).craftsman_id){
+                    localStorage.setItem("craftsman",true)
+                }else if(jwt_decode(res.data.access).custmer_id) {
+                    localStorage.setItem("custmer",true)
+                }
                 localStorage.setItem("AuthTokens", JSON.stringify(res.data))
                 localStorage.setItem("flag",true)
                 return true
@@ -135,6 +140,8 @@ export function AuthProvider({ children }) {
         setCustmerID(null);
         localStorage.removeItem("AuthTokens")
         localStorage.removeItem("flag")
+        localStorage.removeItem("craftsman")
+        localStorage.removeItem("custmer")
         router.push("/");
     }
 
