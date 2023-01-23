@@ -1,3 +1,9 @@
+body {
+  background-image: url("../assets/wdbg.png");
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  
+}
 
 .container{
   
@@ -9,6 +15,7 @@
   gap: 16px;
   justify-content: center;
   
+
 }
 
 .container .services{
@@ -25,7 +32,7 @@
 
 .container .services .face.face1{
   position: relative;
-  background: #333;
+  background: #422310;
   display:  grid;
   justify-content: center;
   align-items: center;
@@ -34,7 +41,7 @@
 }
 
 .container .services:hover .face.face1{
-  background: rgb(94, 91, 91);
+  background: #A17745;
   transform: translateY(0);
 }
 
@@ -80,18 +87,18 @@
   padding: 0;
 }
 
-.container .services .face.face2 .content a{
+.container .services .face.face2 .content button{
   margin: 15px 0 0;
   display:  inline-block;
   text-decoration: none;
   font-weight: 900;
-  color: #333;
+  color: #A17745;
   padding: 5px;
-  border: 1px solid #333;
+  border: 1px solid #A17745;
 }
 
-.container .services .face.face2 .content a:hover{
-  background: #333;
+.container .services .face.face2 .content button:hover{
+  background: #A17745;
   color: #fff;
 }
 form {

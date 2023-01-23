@@ -81,27 +81,29 @@ export default function Booking({id}) {
         Book Now!
       </Button>
 
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+      <Modal className="moddd" show={show} onHide={handleClose}>
+        <div className="modalbooking">
+        <Modal.Header className="modalheader" closeButton>
           <Modal.Title>Booking</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form onSubmit={handleSubmit}>
+          <Form className="formbooking" onSubmit={handleSubmit}>
             <Form.Group className="mb-3">
               <Form.Label>Description</Form.Label>
-              <Form.Control as="textarea" rows={3} onChange={handleDescriptionChange}/>
+              <Form.Control className="textfields" as="textarea" rows={3} onChange={handleDescriptionChange}/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="datepicker">
+            <Form.Group  className="mb-3" controlId="datepicker">
               <Form.Label>Select a date:</Form.Label>
               <Form.Control
+                className="textfields"
                 type="date"
                 onChange={handleDateChange}
                 min={new Date().toISOString().split("T")[0]}
               />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="timepicker">
+            <Form.Group  className="mb-3" controlId="timepicker">
               <Form.Label>Select a time:</Form.Label>
-              <Form.Control as="select" onChange={handleHourChange}>
+              <Form.Control className="textfields" as="select" onChange={handleHourChange}>
                 {hours.map((hour) => (
                   <option key={hour} value={hour}>
                     {hour}
@@ -126,16 +128,16 @@ export default function Booking({id}) {
                 checked={selectedAmPm === "PM"}
                 onChange={handleAmPmChange}
               />
-            </Form.Group>
-            <Button variant="primary" type="submit">
+            </Form.Group >
+            <Button className="btnbooking" variant="primary" type="submit" onClick={handleClose}>
               Submit
             </Button>
           </Form>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="btnclosebooking" variant="secondary" onClick={handleClose}>
             Close
           </Button>
         </Modal.Body>
-
+        </div>
       </Modal>
     </>
   );
