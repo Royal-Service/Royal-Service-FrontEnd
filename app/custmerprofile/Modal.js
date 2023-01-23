@@ -43,14 +43,17 @@ export default function Modal2({userData}) {
       </Button>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+      <div className="modalbooking">
+
+        <Modal.Header className="modalheader" closeButton>
+          <Modal.Title>Update your Info</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Form>
+          <Form className="formbooking">
             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
               <Form.Label>First Name</Form.Label>
               <Form.Control
+              className="textfields"
                 type="text"
                 name="first_name"
                 value={formData.first_name}
@@ -63,6 +66,7 @@ export default function Modal2({userData}) {
               <Form.Label>Last Name</Form.Label>
               <Form.Control
                 type="text"
+                className="textfields"
                 name="last_name"
                 value={formData.last_name}
                 onChange={handleFormChange}
@@ -85,6 +89,7 @@ export default function Modal2({userData}) {
               <Form.Label>Phone Number</Form.Label>
               <Form.Control
                 type="text"
+                className="textfields"
                 name="phone_number"
                 value={formData.phone_number}
                 onChange={handleFormChange}
@@ -110,14 +115,16 @@ export default function Modal2({userData}) {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button className="btnbooking" variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleFormSubmit}>
+          <Button className="btnbooking" variant="primary" onClick={handleFormSubmit}>
             Save Changes
           </Button>
         </Modal.Footer>
+        </div>
       </Modal>
+
     </>
   );
 }

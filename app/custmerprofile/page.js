@@ -77,7 +77,8 @@ export default function CustmerProfile() {
      
      if (userData) {
           return (
-            <section style={{ backgroundColor: "#eee" }}>
+            <div class="bg-dark">
+            <section  style={{ backgroundColor: "#eee" }}>
               <MDBContainer className="py-5">
                 <br></br>
                 <br></br>
@@ -105,14 +106,14 @@ export default function CustmerProfile() {
                     {/* Reservation Schedule Information */}
                     <MDBCard className="mb-4 mb-lg-0 custom-width">
                       <MDBCardBody className="p-50">
-                        <MDBCardTitle className="text-right header-custom">
-                          Reservation schedule
+                        <MDBCardTitle className="text-left header-custom">
+                          Reservation schedule:
                         </MDBCardTitle>
                         <MDBListGroup flush className="rounded-3">
 
 
                           <MDBListGroupItem className="d-flex  p-3">
-                            <MDBCardText className="text-right">
+                            <MDBCardText className="text-left">
                               <FilterReservation />
                             </MDBCardText>
                           </MDBListGroupItem>
@@ -203,6 +204,8 @@ export default function CustmerProfile() {
                 </MDBRow>
               </MDBContainer>
             </section>
+
+          </div>
           );
           }
      }

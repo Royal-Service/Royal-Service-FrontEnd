@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Form from "react-bootstrap/Form";
 import axios from "axios";
 import moment from "moment";
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
 
 
@@ -83,31 +84,35 @@ function EditBooking({ bookInfo }) {
 
     return (
         <>
-            <Button variant="primary" onClick={handleShow}>
+        
+            <Button className="editb" variant="primary" onClick={handleShow}>
                 Edit
+                
             </Button>
 
             <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
+             <div className="modalbooking">
+                <Modal.Header className="modalheader" closeButton>
                     <Modal.Title>Edit Booking</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                    <Form onSubmit={handleSubmit}>
+                    <Form className="formbooking" onSubmit={handleSubmit}>
                         <Form.Group className="mb-3">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} onChange={handleDescriptionChange} />
+                            <Form.Control className="textfields" as="textarea" rows={3} onChange={handleDescriptionChange} />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="datepicker">
                             <Form.Label>Select a date:</Form.Label>
                             <Form.Control
                                 type="date"
+                                className="textfields"
                                 onChange={handleDateChange}
                                 min={new Date().toISOString().split("T")[0]}
                             />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="timepicker">
                             <Form.Label>Select a time:</Form.Label>
-                            <Form.Control as="select" onChange={handleHourChange}>
+                            <Form.Control className="textfields" as="select" onChange={handleHourChange}>
                                 {hours.map((hour) => (
                                     <option key={hour} value={hour}>
                                         {hour}
@@ -133,16 +138,16 @@ function EditBooking({ bookInfo }) {
                                 onChange={handleAmPmChange}
                             />
                         </Form.Group>
-                        <Button variant="primary" type="submit" onClick={handleClose}>
+                        <Button className="btnbooking" variant="primary" type="submit" onClick={handleClose}>
                             Submit
                         </Button>
-                        <Button variant="danger" onClick={handleDelete}>
+                        <Button className="editbtn2" variant="danger" onClick={handleDelete}>
                             Delete 
                         </Button>
                     </Form>
 
                 </Modal.Body>
-
+                </div>
             </Modal>
         </>
     );

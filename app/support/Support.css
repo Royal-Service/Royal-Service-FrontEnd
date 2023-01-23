@@ -41,5 +41,11 @@
     margin-top: 20px;
     margin-right: 75rem;
     background-color: #65441A;
+    border-color: whitesmoke;
+    width: 7rem;
+  }
+  .button:hover{
+    background-color: whitesmoke;
+    border-color:#65441A ;
   }
   /* // */
