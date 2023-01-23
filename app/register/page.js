@@ -70,7 +70,7 @@ function RegistrationForm() {
 
   return (
 
-
+   <div className="maincon2">
     <div className="section">
       <div className="container1">
         <div className="row full-height justify-content-center">
@@ -259,6 +259,7 @@ function RegistrationForm() {
         </div>
       </div>
     </div>
+  </div>
 
   );
 }

@@ -41,6 +41,9 @@ h6 span{
   text-transform: uppercase;
   font-weight: 700;
 }
+.maincon{
+  background-color: #1D1C18;
+}
 .section{
   position: relative;
   width: 100%;
@@ -114,7 +117,7 @@ h6 span{
 .card-front, .card-back {
   width: 100%;
   height: 100%;
-  background-color: #2a2b38;
+  background-color: #1e1e1e;
   background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -260,8 +263,8 @@ h6 span{
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
-  color: #102770;
+  background-color: #65441A;
+  color: white;
   box-shadow: 0 8px 24px 0 rgba(255,235,167,.2);
 }
 .btn1:active,
@@ -271,8 +274,8 @@ h6 span{
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 .btn1:hover{  
-  background-color: #102770;
-  color: #ffeba7;
+  background-color: white;
+  color: #65441A;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 

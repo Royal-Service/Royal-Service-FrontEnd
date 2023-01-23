@@ -67,6 +67,7 @@ export default function login(props) {
   // };
 
   return (
+    <div className="maincon">
     <div className="section">
       <div className="container">
         <div className="row full-height justify-content-center">
@@ -132,6 +133,8 @@ export default function login(props) {
           </div>
         </div>
       </div>
+    </div>
+
     </div>
   );
 }
