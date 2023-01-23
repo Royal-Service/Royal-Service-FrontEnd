@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  
 }
 
 
@@ -14,19 +15,23 @@ body .container {
   align-items: center;
   flex-wrap: wrap;
   
-  
+ 
 }
 
+
 body .container .card {
-  position: relative;
-  min-width: 320px;
-  height: 440px;
+  position: flex;
+  min-width: 300px;
+  height: 320px;
+  background-color: #2E1708;
   box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
     inset -5px -5px 15px rgba(255, 255, 255, 0.1),
     5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   margin: 30px;
   transition: 0.5s;
+  margin-top: 10rem;
+  
 }
 
 body .container .card .box {
@@ -35,7 +40,7 @@ body .container .card .box {
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background: #2a2b2f;
+  background: #7D5532;
   border-radius: 15px;
   display: flex;
   justify-content: center;
@@ -87,20 +92,21 @@ body .container .card .box .content p {
   transition: 0.5s;
 }
 
-body .container .card .box .content a {
+body .container .card .box .content button {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
-  background: black;
+  background: #65441A;
   border-radius: 5px;
+  border-color: #36240c;
   text-decoration: none;
   color: white;
   margin-top: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
-body .container .card .box .content a:hover {
+body .container .card .box .content button:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-  background: #fff;
-  color: #000;
+  background: white;
+  color: #65441a;
 }

@@ -2,6 +2,7 @@
 import React, { useState,useEffect } from 'react';
 import "react-datetime/css/react-datetime.css";
 import "../card.css"
+import "../page.css"
 
 import Booking from '../../components/Booking';
 

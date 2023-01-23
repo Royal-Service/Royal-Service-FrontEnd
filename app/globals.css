@@ -294,4 +294,41 @@ body {
   opacity: 1;
   transition: 0s
 }
-
+.moddd{
+  border-radius: 20%;
+}
+.modalbooking {
+  color: black;
+  background-color: #AA894E;
+}
+.modalbooking .modalheader{
+  background-color: #1e1e1e;
+  color: white;
+  padding-left: 200px;
+}
+.modalbooking .btnbooking{
+  background-color: #1e1e1e;
+}
+.modalbooking .btnbooking:hover{
+  background-color: #8C6E3F;
+}
+.modalbooking .btnclosebooking{
+  background-color: #1e1e1e;
+  border-color: #AA894E;
+}
+.modalbooking .btnclosebooking:hover{
+  background-color: #8C6E3F;
+}
+.formbooking{
+  padding: 20px;
+  display: block;
+}
+.btnbooking{
+  margin-left: 160px;
+}
+.btnclosebooking{
+  margin-left: 400px;
+}
+.modalbooking .textfields{
+  background-color: #dad8d5;
+}

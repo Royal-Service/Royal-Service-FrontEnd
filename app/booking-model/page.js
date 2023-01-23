@@ -28,7 +28,7 @@ export default function Mods() {
                     <Form>
 
 
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                        <Form.Group className="mb-10" controlId="exampleForm.ControlInput1">
                             <Form.Label>Date</Form.Label>
                             <DateTime     dateFormat="YYYY-MM-DD" timeFormat="h:mm a" />
                         </Form.Group>
