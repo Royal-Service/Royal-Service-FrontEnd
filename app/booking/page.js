@@ -20,19 +20,7 @@ const handleChange = (time) => {
     return(
 <>
 
-{/* <h2 > select your booking date and time</h2>
-<Datetime 
-  value={new Date()} 
-  input={true} 
-  className="custom-styles"
-  onChange={handleChange}
-  renderInput={(props, openCalendar) => (
-    <div className="input-container">
-      <input {...props} className="form-control" />
-      <i className="icon" onClick={openCalendar}><FontAwesomeIcon icon={faCalendar}/></i>
-    </div>
-  )}
-/> */}
+
 
 {/* ----------------cards-------------- */}
 

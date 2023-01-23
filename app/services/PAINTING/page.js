@@ -5,6 +5,7 @@ import "../card.css"
 import "../page.css"
 
 import Booking from '../../components/Booking';
+import Showcraftsman from '../../components/Showcraftsman';
 
 
 export default function PAINTING (){
@@ -44,6 +45,8 @@ export default function PAINTING (){
 
         <p>Price: {d.price}JD/hour</p>
                 <Booking id={d.id}></Booking>
+                <Showcraftsman d={d}></Showcraftsman>
+
       </div>
     </div>
   </div>
