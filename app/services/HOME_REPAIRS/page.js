@@ -5,6 +5,7 @@ import "../card.css"
 import "../page.css"
 import { useRouter } from 'next/navigation';
 import Booking from '../../components/Booking';
+import Showcraftsman from '../../components/Showcraftsman';
 
 export default function HOME_REPAIRS() {
 
@@ -42,6 +43,8 @@ export default function HOME_REPAIRS() {
 
                 <p>Price: {d.price}JD/hour</p>
                 <Booking id={d.id}></Booking>
+                <Showcraftsman d={d}></Showcraftsman>
+
               </div>
             </div>
           </div>

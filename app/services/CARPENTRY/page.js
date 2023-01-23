@@ -4,6 +4,7 @@ import "react-datetime/css/react-datetime.css";
 import "../card.css"
 import "../page.css"
 import Booking from '../../components/Booking';
+import Showcraftsman from '../../components/Showcraftsman';
 
 
 
@@ -44,6 +45,8 @@ export default function CARPENTRY (){
 
         <p>Price: {d.price}JD/hour</p>
         <Booking id={d.id}></Booking>
+        <Showcraftsman d={d}></Showcraftsman>
+
       </div>
     </div>
   </div>
