@@ -16,3 +16,10 @@
      text-align: left;
      
    }
+   .rounded-3{
+    overflow: auto;
+   }
+
+   .bg-dark{
+    background-color: black;
+   }

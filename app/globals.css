@@ -297,6 +297,19 @@ body {
 .moddd{
   border-radius: 20%;
 }
+.editb{
+  margin-left: 20rem;
+  
+}
+.modalbooking .editbtn2{
+  background-color:#1e1e1e ;
+  border-color: #1e1e1e;
+  margin-left: 1rem;
+}
+.modalbooking .editbtn2:hover{
+ background-color:  #8C6E3F;
+ border-color: whitesmoke;
+}
 .modalbooking {
   color: black;
   background-color: #AA894E;
@@ -304,13 +317,16 @@ body {
 .modalbooking .modalheader{
   background-color: #1e1e1e;
   color: white;
-  padding-left: 200px;
+  text-align: left;
+  
 }
 .modalbooking .btnbooking{
   background-color: #1e1e1e;
+  border-color: #AA894E;
 }
 .modalbooking .btnbooking:hover{
   background-color: #8C6E3F;
+  border-color: whitesmoke;
 }
 .modalbooking .btnclosebooking{
   background-color: #1e1e1e;
