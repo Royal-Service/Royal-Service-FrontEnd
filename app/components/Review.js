@@ -3,7 +3,7 @@ import React from 'react'
 function Review({allReview}) {
     // console.log(rate[2].reviews[0])
   return (
-    <div>
+    <div style={{maxHeight: "500px"}}>
         {allReview.map((item,index )=>{
             // subject = name
             return(<div >

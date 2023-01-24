@@ -105,7 +105,7 @@ export default function Profile() {
                         icon="github fa-lg"
                         style={{ color: "#333333" }}
                       />
-                      <MDBCardText  style={{ backgroundColor: "#AA894E" }}>
+                      <MDBCardText id="revis2" style={{ backgroundColor: "#AA894E" }}>
 
 
 

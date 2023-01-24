@@ -71,22 +71,22 @@ function Showcraftsman({ d }) {
       </Button>
 
       <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton style={{backgroundColor: "rgb(46, 23, 8)" ,color:"white"}}>
           <Modal.Title>{d.first_name + " " + d.last_name} Profile</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: "#AA894E" ,color:"whitesmoke" }}>
           {d && (
             <>
-              <section style={{ backgroundColor: "#eee" }}>
-                <MDBContainer className="py-5">
+              <section style={{ backgroundColor: "#AA894E" ,color:"whitesmoke" }}>
+                <MDBContainer className="py-5"  style={{  backgroundColor: "#AA894E" }}>
                   <MDBRow>
 
                   </MDBRow>
 
                   <MDBRow>
                     <MDBCol lg="4">
-                      <MDBCard className="mb-4">
-                        <MDBCardBody className="text-center">
+                      <MDBCard className="mb-4" >
+                        <MDBCardBody className="text-center" style={{ backgroundColor: "rgb(170, 137, 78)" ,borderRadius:"20%",  margin: "20px"}}>
                           <MDBCardImage
                             src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                             alt="avatar"
@@ -94,33 +94,30 @@ function Showcraftsman({ d }) {
                             style={{ width: "150px" }}
                             fluid
                           />
-                          <p className="text-muted mb-1">{d.crafts}</p>
-                          <p className="text-muted mb-4">{d.location}</p>
-                          <div className="d-flex justify-content-center mb-2">
-                            
-                            <MDBBtn outline className="ms-1">
-                              Message
-                            </MDBBtn>
-                          </div>
+                          <hr></hr>
+                          <h5 className="text-muted mb-1"> Craft : {d.crafts}</h5>
+                          <hr></hr>
+                          <h5 className="text-muted mb-4">Location : {d.location}</h5>
+ 
                         </MDBCardBody>
                       </MDBCard>
 
                       <MDBCard className="mb-4 mb-lg-0">
-                        <MDBCardBody className="p-0">
-                          <MDBListGroup flush className="rounded-3">
-                            <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
+                        <MDBCardBody className="p-0" >
+                          <MDBListGroup flush className="rounded-3" style={{ width: "900px" }}>
+                            <MDBListGroupItem className="d-flex  align-items-center p-3" style={{ backgroundColor: "#2E1708" ,color:"white"}}>
                               <MDBIcon fas icon="globe fa-lg text-warning" />
-                              <MDBCardText>
+                              <MDBCardText style={{marginLeft: "40%"}} >
                                 Average rating : 
                               </MDBCardText>
                             </MDBListGroupItem>
-                            <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
+                            <MDBListGroupItem className="d-flex  align-items-center p-3" style={{ backgroundColor:"#3C2A21"}}>
                               <MDBIcon
                                 fab
                                 icon="github fa-lg"
                                 style={{ color: "#333333" }}
                               />
-                              <MDBCardText>
+                              <MDBCardText >
                                 
                                 <Re id={data.id}></Re>
                               </MDBCardText>
@@ -131,19 +128,19 @@ function Showcraftsman({ d }) {
                     </MDBCol>
                     <MDBCol lg="8">
                       <MDBCard className="mb-4">
-                        <MDBCardBody>
-                          <MDBRow>
+                        <MDBCardBody style={{ backgroundColor: "rgb(170, 137, 78)",borderRadius:"20%"  , margin: "20px"}}>
+                          <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Full Name</MDBCardText>
                             </MDBCol>
                             <MDBCol sm="9">
-                              <MDBCardText className="text-muted">
+                              <MDBCardText className="text-muted" >
                                 {d.first_name + " " + d.last_name}
                               </MDBCardText>
                             </MDBCol>
                           </MDBRow>
                           <hr />
-                          <MDBRow>
+                          <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Email</MDBCardText>
                             </MDBCol>
@@ -154,18 +151,18 @@ function Showcraftsman({ d }) {
                             </MDBCol>
                           </MDBRow>
                           <hr />
-                          <MDBRow>
+                          <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Phone</MDBCardText>
                             </MDBCol>
                             <MDBCol sm="9">
-                              <MDBCardText className="text-muted">
+                              <MDBCardText className="text-muted" >
                                 {d.phone_number}
                               </MDBCardText>
                             </MDBCol>
                           </MDBRow>
                           <hr />
-                          <MDBRow>
+                          <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Price </MDBCardText>
                             </MDBCol>
@@ -176,7 +173,7 @@ function Showcraftsman({ d }) {
                             </MDBCol>
                           </MDBRow>
                           <hr />
-                          <MDBRow>
+                          <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>location</MDBCardText>
                             </MDBCol>
