@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from "next/navigation";
+import swal from 'sweetalert';
 import './reg.css';
 
 function RegistrationForm() {
   const [flag,setFlag]=useState(false)
+  const router = useRouter();
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',
@@ -50,6 +53,8 @@ function RegistrationForm() {
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
+        swal("Regester Succes", "Welcome to our website we are glad to bepart of us!", "success");
+        router.push("/");
       })
       .catch((error) => {
         console.error('Error:', error);

@@ -26,6 +26,7 @@ import "./dashboard.css";
 import Editcraftsman from "../editcraftsman/page";
 import FilterBooking from "../components/FilterBooking";
 import Review from "../components/Review";
+import Rate from "../components/Rate";
 export default function Profile() {
   const { userInfo, craftsmanID } = useAuth();
 
@@ -35,6 +36,7 @@ export default function Profile() {
   const [userData, setUserData] = useState();
   const [rate, setRate] = useState();
   const [allReview, setAllReview] = useState();
+  const [rateflag,setRateFlag]=useState(false)
 
   const filterReview = (arr) => {
     let reviews = arr[2].reviews;
@@ -54,7 +56,7 @@ export default function Profile() {
       }
     })();
   }, []);
-
+  console.log(rate +"outtttttttt")
   if (userData) {
     return (
       <div className="imgbg"  style={{ backgroundImage:" url('https://cdn.discordapp.com/attachments/1023858495428235294/1067370789831184494/DALLE_2023-01-23_12.52.13_-_wooden_background.png')"
@@ -86,6 +88,7 @@ export default function Profile() {
                 </MDBCardBody>
               </MDBCard>
 
+
               <MDBCard className="mb-4 mb-lg-0">
                 <MDBCardBody className="p-0" style={{ backgroundColor: "#AA894E" }}>
                   <MDBListGroup flush className="rounded-3" >
@@ -93,6 +96,7 @@ export default function Profile() {
                       <MDBIcon fas icon="globe fa-lg text-warning" />
                       <MDBCardText  style={{ backgroundColor: "#AA894E" ,textAlign: "left" ,fontSize: "1.2em" }}  >
                          <h4>Average rating : {rate[1].toFixed(1)} </h4>
+
                       </MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex  align-items-center p-3"   style={{ backgroundColor: "#AA894E" }}>
@@ -121,6 +125,9 @@ export default function Profile() {
 
                 </MDBCardBody>
               </MDBCard>
+              
+         
+
             </MDBCol>
             <MDBCol lg="8">
               <MDBCard className="mb-4"  style={{ backgroundColor: "#AA894E" }}>

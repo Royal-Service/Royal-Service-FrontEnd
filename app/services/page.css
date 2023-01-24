@@ -22,12 +22,15 @@ body {
   position: relative;
   cursor: pointer;
   margin-top: 6rem;
+  
 }
 
 .container .services .face{
   width: 300px;
   height: 200px;
   transition: 0.5s;
+  border-radius: 15px;
+  border-color: #422310;
 }
 
 .container .services .face.face1{
