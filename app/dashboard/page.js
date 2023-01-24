@@ -57,25 +57,18 @@ export default function Profile() {
 
   if (userData) {
     return (
-      <section style={{ backgroundColor: "#eee" }}>
-        <MDBContainer className="py-5">
-          <MDBRow>
-            <MDBCol>
-              <MDBBreadcrumb className="bg-light rounded-3 p-3 mb-4">
-                <MDBBreadcrumbItem>
-                  <a href="#">Home</a>
-                </MDBBreadcrumbItem>
-                <MDBBreadcrumbItem>
-                  <a href="#">User</a>
-                </MDBBreadcrumbItem>
-                <MDBBreadcrumbItem active>User Profile</MDBBreadcrumbItem>
-              </MDBBreadcrumb>
-            </MDBCol>
-          </MDBRow>
+      <div className="imgbg"  style={{ backgroundImage:" url('https://cdn.discordapp.com/attachments/1023858495428235294/1067370789831184494/DALLE_2023-01-23_12.52.13_-_wooden_background.png')"
+    , paddingTop:"150px"  }}>
+
+       <section className="imgbg" style={{ backgroundImage:" url('https://cdn.discordapp.com/attachments/1023858495428235294/1067370789831184494/DALLE_2023-01-23_12.52.13_-_wooden_background.png')"
+    }}>
+       
+        <MDBContainer className="py-5" style={{textAlign: "center"  }}>
+       
 
           <MDBRow>
             <MDBCol lg="4">
-              <MDBCard className="mb-4">
+              <MDBCard className="mb-4" style={{ backgroundColor: "#AA894E" }}>
                 <MDBCardBody className="text-center">
                   <MDBCardImage
                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
@@ -88,36 +81,36 @@ export default function Profile() {
                   <p className="text-muted mb-4">{userData.location}</p>
                   <div className="d-flex justify-content-center mb-2">
                     <Editcraftsman userData={userData}></Editcraftsman>
-                    <MDBBtn outline className="ms-1">
-                      Message
-                    </MDBBtn>
+                   
                   </div>
                 </MDBCardBody>
               </MDBCard>
 
               <MDBCard className="mb-4 mb-lg-0">
-                <MDBCardBody className="p-0">
-                  <MDBListGroup flush className="rounded-3">
-                    <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
+                <MDBCardBody className="p-0" style={{ backgroundColor: "#AA894E" }}>
+                  <MDBListGroup flush className="rounded-3" >
+                    <MDBListGroupItem className="d-flex  align-items-center p-3"  style={{ backgroundColor: "#AA894E" }}>
                       <MDBIcon fas icon="globe fa-lg text-warning" />
-                      <MDBCardText>
-                        Average rating : {rate[1].toFixed(1)}
+                      <MDBCardText  style={{ backgroundColor: "#AA894E" ,textAlign: "left" ,fontSize: "1.2em" }}  >
+                         <h4>Average rating : {rate[1].toFixed(1)} </h4>
                       </MDBCardText>
                     </MDBListGroupItem>
-                    <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
+                    <MDBListGroupItem className="d-flex  align-items-center p-3"   style={{ backgroundColor: "#AA894E" }}>
                       <MDBIcon
                         fab
                         icon="github fa-lg"
                         style={{ color: "#333333" }}
                       />
-                      <MDBCardText>
+                      <MDBCardText  style={{ backgroundColor: "#AA894E" }}>
 
 
 
 
 
-                        <Review allReview={allReview}></Review>
-
+                        <Review allReview={allReview}>
+                        
+                        </Review>
+                    
 
 
 
@@ -125,13 +118,14 @@ export default function Profile() {
                       </MDBCardText>
                     </MDBListGroupItem>
                   </MDBListGroup>
+
                 </MDBCardBody>
               </MDBCard>
             </MDBCol>
             <MDBCol lg="8">
-              <MDBCard className="mb-4">
-                <MDBCardBody>
-                  <MDBRow>
+              <MDBCard className="mb-4"  style={{ backgroundColor: "#AA894E" }}>
+                <MDBCardBody  style={{ backgroundColor: "#AA894E" }}>
+                  <MDBRow  style={{ backgroundColor: "#AA894E" }}>
                     <MDBCol sm="3">
                       <MDBCardText>Full Name</MDBCardText>
                     </MDBCol>
@@ -190,7 +184,7 @@ export default function Profile() {
 
               <MDBRow>
                 <MDBCol md="12">
-                  <MDBCard className="mb-4 mb-md-0">
+                  <MDBCard className="mb-4 mb-md-0" style={{ backgroundColor: "#AA894E" }}>
                     <MDBCardBody>
                       <FilterBooking></FilterBooking>
                     </MDBCardBody>
@@ -200,7 +194,9 @@ export default function Profile() {
             </MDBCol>
           </MDBRow>
         </MDBContainer>
+       
       </section>
+      </div>
     );
   } else {
     return (

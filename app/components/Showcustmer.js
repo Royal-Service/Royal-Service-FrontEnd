@@ -36,7 +36,7 @@ function Showcustmer({ datac }) {
 
 
 
-        <Modal.Body>
+        <Modal.Body >
           <table className="wrapper all-font-sans" width="100%" height="100%" cellPadding="0" cellSpacing="0"  >
             <tbody>
               <tr>
