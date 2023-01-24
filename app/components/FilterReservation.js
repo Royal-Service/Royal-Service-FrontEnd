@@ -25,7 +25,7 @@ function FilterReservation() {
   );
 
   return (
-    <div class="container">
+    <div className="container">
       {filteredData.map((d) => (
         <>
           <div key={d.id} style={{

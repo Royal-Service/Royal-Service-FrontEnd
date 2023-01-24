@@ -24,11 +24,11 @@ const handleChange = (time) => {
 
 {/* ----------------cards-------------- */}
 
-<div class="container">
+<div className="container">
   
-  <div class="card">
-    <div class="box">
-      <div class="content">
+  <div className="card">
+    <div className="box">
+      <div className="content">
        
         <h3>Card Three</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, totam velit? Iure nemo labore inventore?</p>

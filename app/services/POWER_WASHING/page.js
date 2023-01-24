@@ -32,13 +32,13 @@ export default function POWER_WASHING (){
 
     return(
 <>
-<div class="container">
+<div className="container">
 
 {filteredData.map(d => (
 
-  <div key={d.id} class="card">
-    <div class="box">
-      <div class="content">
+  <div key={d.id} className="card">
+    <div className="box">
+      <div className="content">
 
         <h3>{d.first_name} {d.last_name}</h3>
         <p>Phone: {d.phone_number}</p>
