@@ -88,13 +88,14 @@ function Review({ id }) {
           <>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3">
-                <Form.Label>Add Review</Form.Label>
+                <Form.Label style={{ textAlign: "center" ,color: "white"}}>Add Review</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={3}
                   onChange={(e) =>
                     setFormData({ ...formData, review: e.target.value })
                   }
+                  style={{ width: "500px" }}
                 />
               </Form.Group>
               <Form.Group>
@@ -138,7 +139,7 @@ function Review({ id }) {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="datepicker"></Form.Group>
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" style={{ backgroundColor: "rgb(46, 23, 8)" ,color: "gold" }}>
                 Submit
               </Button>
             </Form>

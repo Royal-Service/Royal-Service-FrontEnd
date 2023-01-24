@@ -353,3 +353,10 @@ body {
   overflow-x: hidden ;
 height: 500px;
 }
+
+#revis2 {
+  overflow:scroll;
+  overflow-x: hidden ;
+height: 500px;
+}
+
