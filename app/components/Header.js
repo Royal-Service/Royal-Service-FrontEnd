@@ -45,8 +45,8 @@ export default function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link href="../">Home</Nav.Link>
-            <Nav.Link href="/services">Services</Nav.Link>
-
+            {/* <Nav.Link href="/services">Services</Nav.Link> */}
+            {localStorage.getItem("custmer") ? <Nav.Link href="/services">Services</Nav.Link>:<></>}
             <Nav.Link href="/support">Support</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             {localStorage.getItem("craftsman") ? <Nav.Link href="/dashboard">Profile</Nav.Link> : localStorage.getItem("custmer") ? <Nav.Link href="/custmerprofile">Profile</Nav.Link>:<></>}
