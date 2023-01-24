@@ -183,19 +183,17 @@ body {
 }
 
 .footer-basic {
-  padding: 40px 0;
   background-color: #AA894E;
-  color: #1D1C18;
+  color: #332c20;
 }
 
 
 
 .footer-basic ul {
   padding: 0;
-  display: flex;
-  justify-content: space-evenly;
+  display:flex;
   list-style: none;
-  text-align: center;
+  flex-direction:column;
   font-size: 18px;
   line-height: 1.6;
   margin-bottom: 0;
@@ -263,6 +261,7 @@ body {
   width: 200px;
   text-align: center;
   -webkit-transition-duration: 0.4s;
+  
   /* Safari */
   transition-duration: 0.4s;
   text-decoration: none;
