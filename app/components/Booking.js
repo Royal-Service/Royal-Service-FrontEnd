@@ -67,7 +67,7 @@ export default function Booking({id}) {
         .then((response) => response.json())
         .then((data) => {
           console.log('Success:', data);
-          alert("done")
+          alert(data.status)
         })
         .catch((error) => {
           console.error('Error:', error);
