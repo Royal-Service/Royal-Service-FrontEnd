@@ -26,6 +26,7 @@ import "./dashboard.css";
 import Editcraftsman from "../editcraftsman/page";
 import FilterBooking from "../components/FilterBooking";
 import Review from "../components/Review";
+import Rate from "../components/Rate";
 export default function Profile() {
   const { userInfo, craftsmanID } = useAuth();
 
@@ -35,6 +36,7 @@ export default function Profile() {
   const [userData, setUserData] = useState();
   const [rate, setRate] = useState();
   const [allReview, setAllReview] = useState();
+  const [rateflag,setRateFlag]=useState(false)
 
   const filterReview = (arr) => {
     let reviews = arr[2].reviews;
@@ -54,7 +56,7 @@ export default function Profile() {
       }
     })();
   }, []);
-
+  console.log(rate +"outtttttttt")
   if (userData) {
     return (
       <section style={{ backgroundColor: "#eee" }}>
@@ -94,14 +96,15 @@ export default function Profile() {
                   </div>
                 </MDBCardBody>
               </MDBCard>
-
-              <MDBCard className="mb-4 mb-lg-0">
+              
+                <MDBCard className="mb-4 mb-lg-0">
                 <MDBCardBody className="p-0">
                   <MDBListGroup flush className="rounded-3">
                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
                       <MDBIcon fas icon="globe fa-lg text-warning" />
                       <MDBCardText>
-                        Average rating : {rate[1].toFixed(1)}
+                        <Rate rate={rate}></Rate>
+                        {/* Average rating : {rate[1].toFixed(1)} */}
                       </MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex justify-content-between align-items-center p-3">
@@ -127,6 +130,9 @@ export default function Profile() {
                   </MDBListGroup>
                 </MDBCardBody>
               </MDBCard>
+              
+         
+
             </MDBCol>
             <MDBCol lg="8">
               <MDBCard className="mb-4">
