@@ -13,6 +13,7 @@ body{
 	background-color: #1D1C18;
 	overflow-x: hidden;
 }
+
 a {
 	cursor: pointer;
   transition: all 200ms linear;
@@ -41,8 +42,12 @@ h6 span{
   font-weight: 700;
 }
 .maincon2{
-  background-color: #1D1C18;
+  /* background-color: #1D1C18; */
   padding: 4rem 0;
+  background-image: url("../assets/DALL·E\ 2023-01-24\ 14.10.48\ -\ dark\ brown\ background\ theme\ with\ carpentry\ tools1.png");
+  background-repeat: no-repeat;
+  background-size: 100rem;
+  /* background-position: right top; */
 
 }
 .section{
@@ -301,5 +306,9 @@ cursor: pointer;
 
 .container1{
   margin-bottom: 11rem ;
-  background-color: #1D1C18;
+  /* background-color: #1D1C18; */
+  /* background-image: url("../assets/abbbbd.png"); */
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  background-position: right top;
 }
