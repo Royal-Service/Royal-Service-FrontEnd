@@ -55,7 +55,7 @@ export default function Header() {
 
           </Nav>
           {localStorage.getItem("flag") ? (
-            <button class="btnNav" 
+            <button className="btnNav" 
               onClick={() => {
                 logout();
               }}
@@ -63,13 +63,13 @@ export default function Header() {
               Logout
             </button>
           ) : (<>
-            <button class="btnNav" 
+            <button className="btnNav" 
               onClick={() => router.push("/login")}
               // className="d-flex me-2"
             >
               Log in
             </button>
-            <button class="btnNav" 
+            <button className="btnNav" 
               onClick={() => router.push("/register")}
               // className="d-flex me-2"
             >

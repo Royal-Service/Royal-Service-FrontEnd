@@ -117,7 +117,7 @@ export default function login(props) {
                             submit
                           </button>
                         </form>
-                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                        <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                           Dont have an account yet?{" "}
                           <a
                            href="./register"

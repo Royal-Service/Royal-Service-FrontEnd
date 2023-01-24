@@ -22,7 +22,7 @@ function FilterBooking() {
   );
 
     if (filteredData.length!=0){return (
-      <div class="container" id="revis">
+      <div className="container" id="revis">
         {filteredData.map((d) => (
           <>
             <div key={d.id} style={{

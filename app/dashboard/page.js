@@ -204,43 +204,50 @@ export default function Profile() {
        
       </section>
       </div>
-    );
-  } else {
-    return (
-      <div class="gearbox">
-        <div class="overlay"></div>
-        <div class="gear one">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear two">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear three">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-        <div class="gear four large">
-          <div class="gear-inner">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+    );} else{
+
+      return (
+        <svg viewBox="25 25 50 50">
+  <circle r="20" cy="50" cx="50"></circle>
+</svg>
+      )
+    }
+  // } else {
+  //   return (
+  //     <div className="gearbox">
+  //       <div className="overlay"></div>
+  //       <div className="gear one">
+  //         <div className="gear-inner">
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //         </div>
+  //       </div>
+  //       <div className="gear two">
+  //         <div className="gear-inner">
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //         </div>
+  //       </div>
+  //       <div className="gear three">
+  //         <div className="gear-inner">
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //         </div>
+  //       </div>
+  //       <div className="gear four large">
+  //         <div className="gear-inner">
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //           <div className="bar"></div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 }

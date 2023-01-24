@@ -99,7 +99,7 @@ function Review({ id }) {
                 />
               </Form.Group>
               <Form.Group>
-                <div class="rating">
+                <div className="rating">
                   <input
                     type="radio"
                     name="rating"
