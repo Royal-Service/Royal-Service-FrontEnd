@@ -1,6 +1,4 @@
-.custom-width{
-     width: 1120px;
-}
+
 
 .text-right {
      text-align: right;
@@ -9,17 +7,36 @@
 
 .header-custom {
      font-size: 1.5rem;
-     color: black;
+     color:whitesmoke;
    }
 
    .text-left {
      text-align: left;
      
    }
-   .rounded-3{
+ .rounded-3{
     overflow: auto;
    }
 
-   .bg-dark{
-    background-color: black;
+   .btn{
+    background-color: #65441A;
+    border-color: whitesmoke;
+
+  
    }
+ .btn:hover{
+    background-color: whitesmoke;
+    border-color:#65441A;
+    color: #65441A;
+  
+   }
+
+ #resF{
+   background-color:  #AA894E;
+   }
+.text-muted{
+    color: black !important;
+ }
+ .custom-width{
+ width: 1300px;
+ }

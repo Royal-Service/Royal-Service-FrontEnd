@@ -77,8 +77,10 @@ export default function CustmerProfile() {
      
      if (userData) {
           return (
-            <div class="bg-dark">
-            <section  style={{ backgroundColor: "#eee" }}>
+            <div style={{paddingTop: "200px" , backgroundImage:" url('https://cdn.discordapp.com/attachments/1023858495428235294/1067370789831184494/DALLE_2023-01-23_12.52.13_-_wooden_background.png')"
+          }} >
+            <section  style={{ backgroundImage:" url('https://cdn.discordapp.com/attachments/1023858495428235294/1067370789831184494/DALLE_2023-01-23_12.52.13_-_wooden_background.png')"
+    }}>
               <MDBContainer className="py-5">
                 <br></br>
                 <br></br>
@@ -87,8 +89,8 @@ export default function CustmerProfile() {
                 {/* Profile Picture Section */}
                 <MDBRow>
                   <MDBCol lg="4">
-                    <MDBCard className="mb-4">
-                      <MDBCardBody className="text-center">
+                    <MDBCard className="mb-4"  >
+                      <MDBCardBody className="text-center"  style={{ backgroundColor: "#AA894E" }}>
                         <MDBCardImage
                           src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
                           alt="avatar"
@@ -104,15 +106,15 @@ export default function CustmerProfile() {
                     </MDBCard>
 
                     {/* Reservation Schedule Information */}
-                    <MDBCard className="mb-4 mb-lg-0 custom-width">
+                    <MDBCard  id ="resF" className="mb-4 mb-lg-0 custom-width">
                       <MDBCardBody className="p-50">
                         <MDBCardTitle className="text-left header-custom">
                           Reservation schedule:
                         </MDBCardTitle>
-                        <MDBListGroup flush className="rounded-3">
+                        <MDBListGroup  style={{ backgroundColor: "#AA894E" }} flush className="rounded-3">
 
 
-                          <MDBListGroupItem className="d-flex  p-3">
+                          <MDBListGroupItem className="d-flex  p-3"  style={{ backgroundColor: "#AA894E" ,color:"whitesmoke"}}>
                             <MDBCardText className="text-left">
                               <FilterReservation />
                             </MDBCardText>
@@ -128,14 +130,14 @@ export default function CustmerProfile() {
                   <MDBCol lg="8">
                     {/* <MDBBtn >Edit</MDBBtn> */}
                     
-                    <MDBCard className="mb-4">
+                    <MDBCard className="mb-4" style={{ backgroundColor: "#AA894E" ,color:"whitesmoke"}}>
                       <MDBCardBody>
-                        <MDBRow>
+                        <MDBRow >
                           <MDBCol sm="3">
                             <MDBCardText>Full Name</MDBCardText>
                           </MDBCol>
-                          <MDBCol sm="9">
-                            <MDBCardText className="text-muted">
+                          <MDBCol sm="9" >
+                            <MDBCardText className="text-muted"  >
                               {userData.first_name + " " + userData.last_name}
                             </MDBCardText>
                           </MDBCol>
@@ -145,8 +147,8 @@ export default function CustmerProfile() {
                           <MDBCol sm="3">
                             <MDBCardText>Email</MDBCardText>
                           </MDBCol>
-                          <MDBCol sm="9">
-                            <MDBCardText className="text-muted">
+                          <MDBCol sm="9" >
+                            <MDBCardText className="text-muted" >
                               {userInfo}
                             </MDBCardText>
                           </MDBCol>

@@ -347,3 +347,9 @@ body {
 .modalbooking .textfields{
   background-color: #dad8d5;
 }
+
+#revis {
+  overflow:scroll;
+  overflow-x: hidden ;
+height: 500px;
+}
