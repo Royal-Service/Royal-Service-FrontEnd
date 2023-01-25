@@ -76,10 +76,10 @@ function Review({ id }) {
         allReview.map((item) => {
           // subject = name
           return (
-            <div>
-              <h3>{item.subject}</h3>
-              <h3>{item.review}</h3>
-              <h3>{item.rating}</h3>
+            <div style={{ textAlign: "center" ,color: "white"}}>
+              {/* <h3>{item.subject}</h3> */}
+              <h3>{item.review + " : " + item.rating}</h3>
+              {/* <h3>{item.rating}</h3> */}
             </div>
           );
         })}
@@ -87,7 +87,7 @@ function Review({ id }) {
         {!formFlag && (
           <>
             <Form onSubmit={handleSubmit}>
-              <Form.Group className="mb-3">
+              <Form.Group className="">
                 <Form.Label style={{ textAlign: "center" ,color: "white"}}>Add Review</Form.Label>
                 <Form.Control
                   as="textarea"
@@ -95,7 +95,7 @@ function Review({ id }) {
                   onChange={(e) =>
                     setFormData({ ...formData, review: e.target.value })
                   }
-                  style={{ width: "500px" }}
+                  style={{ width: "825px" }}
                 />
               </Form.Group>
               <Form.Group>
@@ -139,7 +139,7 @@ function Review({ id }) {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="datepicker"></Form.Group>
-              <Button variant="primary" type="submit" style={{ backgroundColor: "rgb(46, 23, 8)" ,color: "gold" }}>
+              <Button variant="primary" type="submit" style={{ marginBottom: "2px", backgroundColor: "rgb(46, 23, 8)" ,color: "gold" }}>
                 Submit
               </Button>
             </Form>
