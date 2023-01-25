@@ -140,17 +140,17 @@ function Showcraftsman({ d }) {
                             </MDBCol>
                           </MDBRow>
                           <hr />
-                          <MDBRow style={{ marginLeft: "25px"}}>
+                          {/* <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Email</MDBCardText>
                             </MDBCol>
                             <MDBCol sm="9">
                               <MDBCardText className="text-muted">
-                                email
+                                {d.email}
                               </MDBCardText>
                             </MDBCol>
                           </MDBRow>
-                          <hr />
+                          <hr /> */}
                           <MDBRow style={{ marginLeft: "25px"}}>
                             <MDBCol sm="3">
                               <MDBCardText>Phone</MDBCardText>
