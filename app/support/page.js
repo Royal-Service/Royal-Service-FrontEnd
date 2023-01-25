@@ -2,7 +2,7 @@
 'use client';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
+import swal from 'sweetalert';
 import emailjs from '@emailjs/browser'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -15,7 +15,7 @@ const Support = () => {
     emailjs.sendForm('service_edfbs9h', 'template_jxbt2lf', e.target, 'T4Ea9iR6Xa0-x7XPz')
       .then((result) => {
         console.log(result.text);
-        alert("Your message has been sent successfully");
+        swal("Your message has been sent successfully");
       }, (error) => {
         console.log(error.text);
       });

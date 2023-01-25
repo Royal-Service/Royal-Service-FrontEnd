@@ -5,6 +5,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { useAuth } from "../contexts/Auth";
 import axios from "axios";
+import swal from 'sweetalert';
 function Editcraftsman({userData}) {
   const { userInfo, craftsmanID } = useAuth();
   const [formData, setFormData] = useState({
@@ -24,7 +25,7 @@ function Editcraftsman({userData}) {
     try {
         const res = await axios.put(`http://127.0.0.1:8000/Craftsmans/profile/edit/${craftsmanID}`, formData);
         console.log(res);
-        alert("Done");
+        swal("Done");
     } catch (err) {
         console.log(err);
     }

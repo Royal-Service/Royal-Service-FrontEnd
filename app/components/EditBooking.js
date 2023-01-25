@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from "react-bootstrap/Form";
 import axios from "axios";
+import swal from 'sweetalert';
 import moment from "moment";
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 
@@ -43,7 +44,7 @@ function EditBooking({ bookInfo }) {
             setSelectedDate(ss);
             setFormData({ ...formData, "day": ss });
         } else {
-            alert("Please select a date in the present or future");
+            swal("Please select a date in the present or future");
         }
     };
     const handleHourChange = (event) => {

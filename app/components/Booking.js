@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Modal from "react-bootstrap/Modal";
 import { useAuth } from "../contexts/Auth";
 import moment from "moment";
+import swal from 'sweetalert';
 export default function Booking({id}) {
   const { tokens } = useAuth();
   const [formData, setFormData] = useState({
@@ -40,7 +41,7 @@ export default function Booking({id}) {
       setSelectedDate(ss);
       setFormData({...formData, "day":ss});
     } else {
-      alert("Please select a date in the present or future");
+      swal("Please select a date in the present or future");
     }
   };
 
@@ -67,11 +68,12 @@ export default function Booking({id}) {
         .then((response) => response.json())
         .then((data) => {
           console.log('Success:', data);
-          alert(data.status)
+          swal(data.status)
         })
         .catch((error) => {
           console.error('Error:', error);
-          alert("error")
+          swal("Book Error", "Something went wrong with booking", "error");
+          // alert("error")
         });
     };
 
