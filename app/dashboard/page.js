@@ -95,8 +95,8 @@ export default function Profile() {
                     <MDBListGroupItem className="d-flex  align-items-center p-3"  style={{ backgroundColor: "#AA894E" }}>
                       <MDBIcon fas icon="globe fa-lg text-warning" />
                       <MDBCardText  style={{ backgroundColor: "#AA894E" ,textAlign: "left" ,fontSize: "1.2em" }}  >
-                         <h4>Average rating : {rate[1].toFixed(1)} </h4>
-
+                         {/* <h4>Average rating : <{rate[1].toFixed(1)}> </h4> */}
+                          <Rate rate={rate} />
                       </MDBCardText>
                     </MDBListGroupItem>
                     <MDBListGroupItem className="d-flex  align-items-center p-3"   style={{ backgroundColor: "#AA894E" }}>
