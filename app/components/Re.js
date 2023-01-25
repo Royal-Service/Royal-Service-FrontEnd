@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import "./Stars.css";
 import { useAuth } from "../contexts/Auth";
+import swal from 'sweetalert';
 function Review({ id }) {
   const { userInfo, tokens, custmerID } = useAuth();
   const [allReview, setAllReview] = useState();
@@ -61,11 +62,11 @@ function Review({ id }) {
       .then((response) => response.json())
       .then((data) => {
         console.log("Success:", data);
-        alert("done");
+        swal("Rate Succes", "Thank you for rating", "Success");
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert("error");
+        swal("Rate Error", "The Rating method did not work successfully!", "Error");
       });
   };
   console.log(allReview);

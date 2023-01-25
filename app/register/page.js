@@ -53,7 +53,7 @@ function RegistrationForm() {
       .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
-        swal("Regester Succes", "Welcome to our website we are glad to bepart of us!", "success");
+        swal("Regester Success", "Welcome to our website we are glad to bepart of us!", "success");
         router.push("/");
       })
       .catch((error) => {
